@@ -45,6 +45,25 @@ namespace BancoConsola
             set { _Saldo = value; }
         }
 
+        public void ConsultarDatos() 
+        {
+            Console.WriteLine("Buenos dias Don/Dña " + _NombreCliente + "\nSu número de Cuenta es: " + _NumeroCuenta + "\nDispone de: " + _Saldo + " Euros en su cuenta.");
+        }
+
+        public void Depositar() 
+        {
+            Console.WriteLine("Introduce cantidad a depositar:");
+            _Saldo = _Saldo + double.Parse(Console.ReadLine());
+            Console.WriteLine("Su saldo es: " + _Saldo);
+        }
+        public void Retirar()
+        {
+            Console.WriteLine("Introduce cantidad a Retirar:");
+            _Saldo = _Saldo - double.Parse(Console.ReadLine());
+            Console.WriteLine("Su saldo es: " + _Saldo);
+        }
+
+
 
     }
 }

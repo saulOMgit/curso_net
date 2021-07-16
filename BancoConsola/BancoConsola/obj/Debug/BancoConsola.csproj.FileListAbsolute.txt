@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\bin\Debug\BancoConsola.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\bin\Debug\BancoConsola.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\bin\Debug\BancoConsola.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\obj\Debug\BancoConsola.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\obj\Debug\BancoConsola.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\obj\Debug\BancoConsola.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\BancoConsola\BancoConsola\obj\Debug\BancoConsola.pdb

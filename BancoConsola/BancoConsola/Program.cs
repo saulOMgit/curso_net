@@ -12,6 +12,10 @@ namespace BancoConsola
         //Se pide crear una clase de tipo cuenta para gestionar ingresos y gastos
         static void Main(string[] args)
         {
+            Cuenta C1 = new Cuenta(007,"Frodo",1000);
+            C1.Depositar();
+            C1.ConsultarDatos();
+            Console.ReadLine();
         }
     }
 }
