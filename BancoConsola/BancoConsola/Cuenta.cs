@@ -58,8 +58,15 @@ namespace BancoConsola
         }
         public void Retirar()
         {
+            double restar=0;
             Console.WriteLine("Introduce cantidad a Retirar:");
-            _Saldo = _Saldo - double.Parse(Console.ReadLine());
+            restar=double.Parse(Console.ReadLine());
+            if (restar > _Saldo) 
+            { Console.WriteLine("Saldo insuficiente"); }
+            else
+            {
+                _Saldo = _Saldo - restar;
+            }
             Console.WriteLine("Su saldo es: " + _Saldo);
         }
 
