@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ZoologicoConsola
 {
-   public class Animal
+   abstract class Animal
     {
         //Todos sus campos privados
-        private string _especie;
-        private string _nombre;
-        private double _peso;
-        private int _jaula;
+        protected string _especie;
+        protected string _nombre;
+        protected double _peso;
+        protected int _jaula;
 
         //constructor por defecto 
         public Animal()
@@ -53,9 +53,8 @@ namespace ZoologicoConsola
             set { _jaula = value; }
         }
     
-        public void QueClaseDeAnimalEres()
+        public virtual void QueClaseDeAnimalEres()
         {
-            Console.WriteLine("Especie: " + _especie + "\nNombre: " + _nombre + "\nPeso: " + _peso + "\n Nº Jaula: " + _jaula);
         }
     }
 }
