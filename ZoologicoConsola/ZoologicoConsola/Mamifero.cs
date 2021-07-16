@@ -16,6 +16,6 @@ namespace ZoologicoConsola
         public override void QueClaseDeAnimalEres()
         {
         Console.WriteLine("Especie: " + Pespecie + "\nNombre: " + Pnombre + "\nPeso: " + Ppeso + "\n Nº Jaula: " + Pjaula);
-    }
+        }
 }
 }
