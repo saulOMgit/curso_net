@@ -38,3 +38,8 @@ AS
 SELECT * FROM Clientes WHERE Nombre LIKE '%'+@Nombre+'%'
 
 EXEC buscarcliente 'PEPE'
+
+--LISTAR
+CREATE PROCEDURE ListarClientes
+AS
+SELECT * FROM Clientes;
