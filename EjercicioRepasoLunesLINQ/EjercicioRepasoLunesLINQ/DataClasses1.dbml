@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RepasoLunes" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA408\SQLEXPRESSSAUL;Initial Catalog=RepasoLunes;Persist Security Info=True;User ID=sa" SettingsObjectName="EjercicioRepasoLunesLINQ.Properties.Settings" SettingsPropertyName="RepasoLunesConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.buscarIDCuenta" Method="buscarIDCuenta">
+    <Parameter Name="IDCuenta" Parameter="iDCuenta" Type="System.String" DbType="VarChar(5)" />
+    <ElementType Name="buscarIDCuentaResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="IDCUENTA" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="SALDO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DIVISA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EliminarCliente" Method="EliminarCliente">
+    <Parameter Name="IDCliente" Parameter="iDCliente" Type="System.String" DbType="VarChar(5)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarcliente" Method="insertarcliente">
+    <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="apellido" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Modificarcliente" Method="Modificarcliente">
+    <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="apellido" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
