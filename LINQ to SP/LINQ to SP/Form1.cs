@@ -31,16 +31,60 @@ namespace LINQ_to_SP
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ClienteLinq.insertarcliente(txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtTelefono.Text);
+            this.listarclientes();
+            txtNombre.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
+            txtTelefono.Text = "";
+            txtBuscar.Text = "";
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            ClienteLinq.Modificarcliente(txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtTelefono.Text);
+            if (txtNombre.Text == "") MessageBox.Show("FALTA NOMBRE");
+            else
+            {
+                ClienteLinq.Modificarcliente(txtNombre.Text, txtApellido1.Text, txtApellido2.Text, txtTelefono.Text);
+                this.listarclientes();
+                txtNombre.Text = "";
+                txtApellido1.Text = "";
+                txtApellido2.Text = "";
+                txtTelefono.Text = "";
+                txtBuscar.Text = "";
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             ClienteLinq.EliminarCliente(txtNombre.Text);
+            this.listarclientes();
+            txtNombre.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
+            txtTelefono.Text = "";
+            txtBuscar.Text = "";
+
+        }
+        void listarclientes() 
+        {
+            GridDatos.DataSource = ClienteLinq.ListarClientes();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.listarclientes();
+        }
+
+        private void bntBuscar_Click(object sender, EventArgs e)
+        {
+            GridDatos.DataSource = ClienteLinq.buscarcliente(txtBuscar.Text);
+            txtNombre.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
+            txtTelefono.Text = "";
+            txtBuscar.Text = "";
         }
     }
 }

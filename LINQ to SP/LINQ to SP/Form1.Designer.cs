@@ -45,6 +45,7 @@ namespace LINQ_to_SP
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.GridDatos = new System.Windows.Forms.DataGridView();
+            this.bntBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,6 +177,16 @@ namespace LINQ_to_SP
             this.GridDatos.Size = new System.Drawing.Size(424, 150);
             this.GridDatos.TabIndex = 14;
             // 
+            // bntBuscar
+            // 
+            this.bntBuscar.Location = new System.Drawing.Point(275, 163);
+            this.bntBuscar.Name = "bntBuscar";
+            this.bntBuscar.Size = new System.Drawing.Size(75, 23);
+            this.bntBuscar.TabIndex = 15;
+            this.bntBuscar.Text = "Buscar";
+            this.bntBuscar.UseVisualStyleBackColor = true;
+            this.bntBuscar.Click += new System.EventHandler(this.bntBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +194,7 @@ namespace LINQ_to_SP
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(456, 373);
+            this.Controls.Add(this.bntBuscar);
             this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -200,6 +212,7 @@ namespace LINQ_to_SP
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "LINQ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,6 +236,7 @@ namespace LINQ_to_SP
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView GridDatos;
+        private System.Windows.Forms.Button bntBuscar;
     }
 }
 
