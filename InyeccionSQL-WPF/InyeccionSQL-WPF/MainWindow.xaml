@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InyeccionSQL_WPF"
         mc:Ignorable="d"
-        Title="Inyeccion SQL-WPF" Height="250" Width="800">
+        Title="Inyeccion SQL-WPF" Height="250" Width="800" ResizeMode="NoResize">
     <Grid>
         <StackPanel Background="Purple" Width="120" Margin="10,0,650,0">
             <Label>INSERTAR</Label>
@@ -36,13 +36,13 @@
         <StackPanel Background="Red" Width="200" Margin="550,0,0,0">
             <Grid></Grid>
         </StackPanel>
-        <!--<Grid.Background>
+        <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
                 <GradientStop Color="#FFCB69F9" Offset="0.95"/>
             </LinearGradientBrush>
 
-        </Grid.Background>-->
+        </Grid.Background>
 
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace InyeccionSQL_WPF
 {
@@ -20,6 +21,7 @@ namespace InyeccionSQL_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SqlConnection conexion = new SqlConnection("server= ASATA408\\SQLEXPRESSSAUL; database=PruebaInyeccionSQL; Persist Security Info=True;User ID=sa;PassWord=1234");
         public MainWindow()
         {
             InitializeComponent();
