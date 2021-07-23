@@ -27,22 +27,30 @@ namespace EjercicioRepasoLunesLINQ
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtIDCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
-            { MessageBox.Show("FALTAN DATOS"); }
-            else
+            //TRY CATCH COMPRUEBA SI HAY IDS REPETIDAS Y EVITA QUE CRASHEE EL PROGRAMA EN ESE CASO
+            try
             {
-                ClienteLinq.insertarcliente(txtIDCliente.Text, txtApellidos.Text, txtNombre.Text);
-                this.listarclientes();
-                txtIDCliente.Text = "";
-                txtApellidos.Text = "";
-                txtNombre.Text = "";
+                if (txtIDCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
+                { MessageBox.Show("FALTAN DATOS"); }
+                else
+                {
+                    ClienteLinq.insertarcliente(txtIDCliente.Text, txtApellidos.Text, txtNombre.Text);
+                    this.listarclientes();
+                    txtIDCliente.Text = "";
+                    txtApellidos.Text = "";
+                    txtNombre.Text = "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("HA HABIDO UN ERROR");
             }
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (txtIDCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
+            if (txtIDCliente.Text == "")
             { MessageBox.Show("FALTAN DATOS"); }
             else
             {
@@ -80,6 +88,7 @@ namespace EjercicioRepasoLunesLINQ
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            //BUSCA SEGUN EL ELEMENTO MOSTRADO EN EL COMBOBOX
             if (cbSeleccion.Text == "ID Cliente")
             {
                 if (txtBuscar.Text == "") { MessageBox.Show("Falta IDCliente"); }
