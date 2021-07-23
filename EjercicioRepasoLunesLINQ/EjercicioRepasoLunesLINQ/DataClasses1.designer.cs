@@ -89,6 +89,34 @@ namespace EjercicioRepasoLunesLINQ
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idcliente, apellido, nombre);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ListarClientes")]
+		public ISingleResult<ListarClientesResult> ListarClientes()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ListarClientesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.buscarApellido")]
+		public ISingleResult<buscarApellidoResult> buscarApellido([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellido", DbType="VarChar(30)")] string apellido)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), apellido);
+			return ((ISingleResult<buscarApellidoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.buscarIDCliente")]
+		public ISingleResult<buscarIDClienteResult> buscarIDCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDCliente", DbType="VarChar(5)")] string iDCliente)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDCliente);
+			return ((ISingleResult<buscarIDClienteResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.buscarNombre")]
+		public ISingleResult<buscarNombreResult> buscarNombre([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombre", DbType="VarChar(30)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
+			return ((ISingleResult<buscarNombreResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class buscarIDCuentaResult
@@ -166,6 +194,254 @@ namespace EjercicioRepasoLunesLINQ
 				if ((this._DIVISA != value))
 				{
 					this._DIVISA = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ListarClientesResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		public ListarClientesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(30)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class buscarApellidoResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		public buscarApellidoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(30)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class buscarIDClienteResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		public buscarIDClienteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(30)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
+				}
+			}
+		}
+	}
+	
+	public partial class buscarNombreResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRE;
+		
+		public buscarNombreResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
+		{
+			get
+			{
+				return this._APELLIDOS;
+			}
+			set
+			{
+				if ((this._APELLIDOS != value))
+				{
+					this._APELLIDOS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(30)")]
+		public string NOMBRE
+		{
+			get
+			{
+				return this._NOMBRE;
+			}
+			set
+			{
+				if ((this._NOMBRE != value))
+				{
+					this._NOMBRE = value;
 				}
 			}
 		}

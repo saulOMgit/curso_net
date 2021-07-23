@@ -96,6 +96,7 @@ SELECT * FROM CUENTA WHERE IDCUENTA LIKE '%'+@IDCuenta+'%'
 
 EXEC buscarIDCuenta 1
 
+
 	--7 CREA UN PROCEDIMIENTO ALMACENADO PARA ELIMINAR UN CLIENTE
 CREATE PROCEDURE EliminarCliente
 @IDCliente varchar(5)
@@ -116,3 +117,32 @@ SET IDCLIENTE=@idcliente,APELLIDOS=@apellido,NOMBRE=@nombre
 WHERE IDCLIENTE=@idcliente
 
 EXEC Modificarcliente 1980,'MOGOLLÓN','ANTONIO'
+
+--listar
+--LISTAR
+CREATE PROCEDURE ListarClientes
+AS
+SELECT * FROM CLIENTE;
+
+EXEC ListarClientes
+
+-- PROCEDIMIENTOS BUSCAR
+CREATE PROCEDURE buscarIDCliente
+@IDCliente varchar(5)
+AS
+SELECT * FROM CLIENTE WHERE IDCLIENTE LIKE '%'+@IDCliente+'%'
+
+EXEC buscarIDCliente 7
+
+CREATE PROCEDURE buscarNombre
+@Nombre varchar(30)
+AS
+SELECT * FROM CLIENTE WHERE NOMBRE LIKE '%'+@Nombre+'%'
+EXEC buscarNombre 'PELAYO'
+
+CREATE PROCEDURE buscarApellido
+@Apellido varchar(30)
+AS
+SELECT * FROM CLIENTE WHERE APELLIDOS LIKE '%'+@Apellido+'%'
+GO
+EXEC buscarApellido 'ROMUALDO'

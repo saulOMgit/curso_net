@@ -30,9 +30,9 @@ namespace EjercicioRepasoLunesLINQ
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.GridDatos = new System.Windows.Forms.DataGridView();
+            this.cbSeleccion = new System.Windows.Forms.ComboBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnIDCLIENTE = new System.Windows.Forms.Button();
             this.btnNombre = new System.Windows.Forms.Button();
             this.btnApellidos = new System.Windows.Forms.Button();
@@ -43,36 +43,44 @@ namespace EjercicioRepasoLunesLINQ
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 247);
-            this.dataGridView1.TabIndex = 0;
+            this.GridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridDatos.Location = new System.Drawing.Point(12, 44);
+            this.GridDatos.Name = "GridDatos";
+            this.GridDatos.Size = new System.Drawing.Size(459, 247);
+            this.GridDatos.TabIndex = 0;
             // 
-            // comboBox1
+            // cbSeleccion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cbSeleccion.FormattingEnabled = true;
+            this.cbSeleccion.Items.AddRange(new object[] {
+            "ID Cliente",
+            "Nombre",
+            "Apellidos"});
+            this.cbSeleccion.Location = new System.Drawing.Point(13, 13);
+            this.cbSeleccion.Name = "cbSeleccion";
+            this.cbSeleccion.Size = new System.Drawing.Size(121, 21);
+            this.cbSeleccion.TabIndex = 1;
+            this.cbSeleccion.Text = "ID Cliente";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBuscar.Location = new System.Drawing.Point(166, 13);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(304, 20);
+            this.txtBuscar.TabIndex = 2;
             // 
             // btnIDCLIENTE
             // 
             this.btnIDCLIENTE.BackColor = System.Drawing.Color.Fuchsia;
             this.btnIDCLIENTE.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnIDCLIENTE.Enabled = false;
             this.btnIDCLIENTE.Location = new System.Drawing.Point(499, 66);
             this.btnIDCLIENTE.Name = "btnIDCLIENTE";
             this.btnIDCLIENTE.Size = new System.Drawing.Size(109, 59);
@@ -84,6 +92,7 @@ namespace EjercicioRepasoLunesLINQ
             // 
             this.btnNombre.BackColor = System.Drawing.Color.Fuchsia;
             this.btnNombre.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnNombre.Enabled = false;
             this.btnNombre.Location = new System.Drawing.Point(499, 131);
             this.btnNombre.Name = "btnNombre";
             this.btnNombre.Size = new System.Drawing.Size(109, 59);
@@ -95,6 +104,7 @@ namespace EjercicioRepasoLunesLINQ
             // 
             this.btnApellidos.BackColor = System.Drawing.Color.Fuchsia;
             this.btnApellidos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnApellidos.Enabled = false;
             this.btnApellidos.Location = new System.Drawing.Point(499, 196);
             this.btnApellidos.Name = "btnApellidos";
             this.btnApellidos.Size = new System.Drawing.Size(109, 59);
@@ -112,6 +122,7 @@ namespace EjercicioRepasoLunesLINQ
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -123,6 +134,7 @@ namespace EjercicioRepasoLunesLINQ
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -134,6 +146,7 @@ namespace EjercicioRepasoLunesLINQ
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtIDCliente
             // 
@@ -170,6 +183,30 @@ namespace EjercicioRepasoLunesLINQ
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.Location = new System.Drawing.Point(490, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(78, 41);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnReset.Location = new System.Drawing.Point(588, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(78, 41);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +214,8 @@ namespace EjercicioRepasoLunesLINQ
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(749, 378);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombre);
@@ -187,12 +226,13 @@ namespace EjercicioRepasoLunesLINQ
             this.Controls.Add(this.btnApellidos);
             this.Controls.Add(this.btnNombre);
             this.Controls.Add(this.btnIDCLIENTE);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cbSeleccion);
+            this.Controls.Add(this.GridDatos);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,9 +240,9 @@ namespace EjercicioRepasoLunesLINQ
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView GridDatos;
+        private System.Windows.Forms.ComboBox cbSeleccion;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnIDCLIENTE;
         private System.Windows.Forms.Button btnNombre;
         private System.Windows.Forms.Button btnApellidos;
@@ -213,6 +253,8 @@ namespace EjercicioRepasoLunesLINQ
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
