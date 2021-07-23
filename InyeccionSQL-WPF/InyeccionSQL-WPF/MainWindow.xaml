@@ -1,0 +1,48 @@
+﻿<Window x:Class="InyeccionSQL_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InyeccionSQL_WPF"
+        mc:Ignorable="d"
+        Title="Inyeccion SQL-WPF" Height="250" Width="800">
+    <Grid>
+        <StackPanel Background="Purple" Width="120" Margin="10,0,650,0">
+            <Label>INSERTAR</Label>
+            <TextBox x:Name="txtID"></TextBox>
+            <TextBox x:Name="txtNombre" Margin="0,10,0,0"></TextBox>
+            <TextBox x:Name="txtEdad" Margin="0,10,0,0"></TextBox>
+            <Button x:Name="bntInsertar" Background="Orange" Margin="0,10,0,0">Botón Insertar</Button>
+
+        </StackPanel>
+        <StackPanel Background="Beige" Width="120" Margin="0,0,250,0">
+            <Label>ELIMINAR</Label>
+            <TextBox x:Name="txtIdEliminar" Margin="0,10,0,0"></TextBox>
+            <Label Background="Blue" Foreground="#FFF1F1F1" Margin="0,20,0,20">Nombre</Label>
+            <Label Background="Blue" Foreground="#FFF1F1F1">Edad</Label>
+
+            <Button x:Name="btnConsultar" Background="Orange" Margin="0,10,0,0" Width="50">Consultar</Button>
+            <Button x:Name="btnBorrar" Background="Orange" Margin="0,10,0,0" Width="50">Borrar</Button>
+
+        </StackPanel>
+        <StackPanel Background="Chocolate" Width="120" Margin="150,0,0,0">
+            <Label>MODIFICAR</Label>
+            <TextBox x:Name="txtModificarID" Margin="0,10,0,0"></TextBox>
+            <Button x:Name="btnBuscar" Background="Orange" Margin="0,10,0,0">Buscar</Button>
+            <TextBox x:Name="txtModificarNombre" Margin="0,10,0,0"></TextBox>
+            <TextBox x:Name="txtModificarEdad" Margin="0,20,0,0"></TextBox>
+            <Button x:Name="btnModificar" Background="Orange" Margin="0,10,0,0">Modificar</Button>
+        </StackPanel>
+        <StackPanel Background="Red" Width="200" Margin="550,0,0,0">
+            <Grid></Grid>
+        </StackPanel>
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFCB69F9" Offset="0.95"/>
+            </LinearGradientBrush>
+
+        </Grid.Background>-->
+
+    </Grid>
+</Window>
