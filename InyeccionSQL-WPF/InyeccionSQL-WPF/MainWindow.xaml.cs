@@ -67,18 +67,23 @@ namespace InyeccionSQL_WPF
 
         private void btnConsultar_Click(object sender, RoutedEventArgs e)
         {
-            conexion.Open();
-            string id = txtIdEliminar.Text;
-            string cadena = "select id,nombre,edad from Personas Where id=" + id;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            SqlDataReader registro = comando.ExecuteReader();
-            if (registro.Read())
+            if (txtIdEliminar.Text == "")
+            { MessageBox.Show("Valor no introducido"); }
+            else
             {
-                LabelNombre.Content = registro["nombre"].ToString();
-                LabelEdad.Content = registro["edad"].ToString();
-                btnBorrar.IsEnabled = true;
+                conexion.Open();
+                string id = txtIdEliminar.Text;
+                string cadena = "select id,nombre,edad from Personas Where id=" + id;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    LabelNombre.Content = registro["nombre"].ToString();
+                    LabelEdad.Content = registro["edad"].ToString();
+                    btnBorrar.IsEnabled = true;
+                }
+                else { MessageBox.Show("No existe un artículo con el código ingresado"); }
             }
-            else { MessageBox.Show("No existe un artículo con el código ingresado");}
             conexion.Close();
 
 
@@ -86,57 +91,75 @@ namespace InyeccionSQL_WPF
 
         private void btnBorrar_Click(object sender, RoutedEventArgs e)
         {
-            conexion.Open();
-            string iden = txtIdEliminar.Text;
-            string cadena = "delete from Personas where id=" + iden;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            int cant;
-            cant = comando.ExecuteNonQuery();
-            if (cant==1)
+            if (txtIdEliminar.Text == "")
+            { MessageBox.Show("Valor no introducido"); }
+            else
             {
-                LabelNombre.Content = "";
-                LabelEdad.Content = "";
-                MessageBox.Show("Se borró el artículo");
+
+                conexion.Open();
+                string iden = txtIdEliminar.Text;
+                string cadena = "delete from Personas where id=" + iden;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                int cant;
+                cant = comando.ExecuteNonQuery();
+                if (cant == 1)
+                {
+                    LabelNombre.Content = "";
+                    LabelEdad.Content = "";
+                    txtIdEliminar.Text = "";
+                    MessageBox.Show("Se borró el artículo");
+                }
+                else { MessageBox.Show("No existe un artículo con el código ingresado"); }
             }
-            else { MessageBox.Show("No existe un artículo con el código ingresado");}
             conexion.Close();
             btnBorrar.IsEnabled = false;
         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            conexion.Open();
-            string cod = txtModificarID.Text;
-            string cadena = "select id, nombre, edad from Personas where id=" + cod;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            SqlDataReader registro = comando.ExecuteReader();
-            if (registro.Read()) 
+            if (txtModificarID.Text == "")
+            { MessageBox.Show("Valor no introducido"); }
+            else
             {
-                txtModificarNombre.Text = registro["nombre"].ToString();
-                txtModificarEdad.Text = registro["edad"].ToString();
+                conexion.Open();
+                string cod = txtModificarID.Text;
+                string cadena = "select id, nombre, edad from Personas where id=" + cod;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    txtModificarNombre.Text = registro["nombre"].ToString();
+                    txtModificarEdad.Text = registro["edad"].ToString();
+                }
+                else { MessageBox.Show("No existe un artículo con el código ingresado"); }
             }
-            else { MessageBox.Show("No existe un artículo con el código ingresado");}
             conexion.Close();
         }
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            conexion.Open();
-            string id = txtModificarID.Text;
-            string nombre = txtModificarNombre.Text;
-            string edad = txtModificarEdad.Text;
-            string cadena = "update Personas set nombre='" + nombre + "', edad" + edad + " where id=" + id;
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            int cant;
-            cant = comando.ExecuteNonQuery();
-            if(cant==1)
+            if (txtModificarID.Text == "" || txtModificarNombre.Text == "" || txtModificarEdad.Text == "")
+            { MessageBox.Show("Falta algún valor"); }
+            else
             {
-                MessageBox.Show("Se modificaron los datos del artículo");
-                txtModificarID.Text = "";
-                txtModificarNombre.Text = "";
-                txtModificarEdad.Text = "";
+
+                conexion.Open();
+                string id = txtModificarID.Text;
+                string nombre = txtModificarNombre.Text;
+                string edad = txtModificarEdad.Text;
+                string cadena = "update Personas set nombre='" + nombre + "', edad=" + edad + " where id=" + id;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                int cant;
+                cant = comando.ExecuteNonQuery();
+                if (cant == 1)
+                {
+                    MessageBox.Show("Se modificaron los datos del artículo");
+                    txtModificarID.Text = "";
+                    txtModificarNombre.Text = "";
+                    txtModificarEdad.Text = "";
+                }
+                else { MessageBox.Show("No existe un artículo con el código ingresado"); }
             }
-            else { MessageBox.Show("No existe un artículo con el código ingresado");}
             conexion.Close();
         }
     }
