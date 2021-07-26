@@ -8,30 +8,30 @@
         Title="Inyeccion SQL-WPF" Height="250" Width="800" ResizeMode="NoResize">
     <Grid>
         <StackPanel Background="Purple" Width="120" Margin="10,0,650,0">
-            <Label>INSERTAR</Label>
-            <TextBox x:Name="txtID"></TextBox>
+            <Label FontFamily="Impact" FontStyle="Italic">INSERTAR</Label>
+            <TextBox x:Name="txtID"/>
             <TextBox x:Name="txtNombre" Margin="0,10,0,0"></TextBox>
             <TextBox x:Name="txtEdad" Margin="0,10,0,0"></TextBox>
-            <Button x:Name="bntInsertar" Background="Orange" Margin="0,10,0,0">Botón Insertar</Button>
+            <Button x:Name="bntInsertar" Background="Orange" Margin="0,10,0,0" Click="bntInsertar_Click">Botón Insertar</Button>
 
         </StackPanel>
         <StackPanel Background="Beige" Width="120" Margin="0,0,250,0">
             <Label>ELIMINAR</Label>
             <TextBox x:Name="txtIdEliminar" Margin="0,10,0,0"></TextBox>
-            <Label Background="Blue" Foreground="#FFF1F1F1" Margin="0,20,0,20">Nombre</Label>
-            <Label Background="Blue" Foreground="#FFF1F1F1">Edad</Label>
+            <Label x:Name="LabelNombre" Background="Blue" Foreground="#FFF1F1F1" Margin="0,20,0,20">Nombre</Label>
+            <Label x:Name="LabelEdad" Background="Blue" Foreground="#FFF1F1F1">Edad</Label>
 
-            <Button x:Name="btnConsultar" Background="Orange" Margin="0,10,0,0" Width="50">Consultar</Button>
-            <Button x:Name="btnBorrar" Background="Orange" Margin="0,10,0,0" Width="50">Borrar</Button>
+            <Button x:Name="btnConsultar" Background="Orange" Margin="35,10,35,0" Click="btnConsultar_Click">Consultar</Button>
+            <Button x:Name="btnBorrar" Background="Orange" Margin="0,10,0,0" Width="50" Click="btnBorrar_Click" IsEnabled="False">Borrar</Button>
 
         </StackPanel>
         <StackPanel Background="Chocolate" Width="120" Margin="150,0,0,0">
             <Label>MODIFICAR</Label>
             <TextBox x:Name="txtModificarID" Margin="0,10,0,0"></TextBox>
-            <Button x:Name="btnBuscar" Background="Orange" Margin="0,10,0,0">Buscar</Button>
+            <Button x:Name="btnBuscar" Background="Orange" Margin="0,10,0,0" Click="btnBuscar_Click">Buscar</Button>
             <TextBox x:Name="txtModificarNombre" Margin="0,10,0,0"></TextBox>
             <TextBox x:Name="txtModificarEdad" Margin="0,20,0,0"></TextBox>
-            <Button x:Name="btnModificar" Background="Orange" Margin="0,10,0,0">Modificar</Button>
+            <Button x:Name="btnModificar" Background="Orange" Margin="0,10,0,0" Click="btnModificar_Click">Modificar</Button>
         </StackPanel>
         <StackPanel Background="Red" Width="200" Margin="550,0,0,0">
             <Grid></Grid>
