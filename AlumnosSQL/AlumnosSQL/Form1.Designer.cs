@@ -40,10 +40,12 @@ namespace AlumnosSQL
             this.cbTurno = new System.Windows.Forms.ComboBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscaDNI = new System.Windows.Forms.Button();
+            this.btnBuscaCOD = new System.Windows.Forms.Button();
             this.txtBusquedaDNI = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtBusquedaCod = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtBusquedaCod = new System.Windows.Forms.TextBox();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbModulo = new System.Windows.Forms.ComboBox();
@@ -53,11 +55,9 @@ namespace AlumnosSQL
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.GridView = new System.Windows.Forms.DataGridView();
-            this.btnBuscaCOD = new System.Windows.Forms.Button();
-            this.btnBuscaDNI = new System.Windows.Forms.Button();
+            this.GridDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +71,7 @@ namespace AlumnosSQL
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(74, 21);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(120, 20);
@@ -163,6 +164,22 @@ namespace AlumnosSQL
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda";
             // 
+            // btnBuscaDNI
+            // 
+            this.btnBuscaDNI.Location = new System.Drawing.Point(139, 49);
+            this.btnBuscaDNI.Name = "btnBuscaDNI";
+            this.btnBuscaDNI.Size = new System.Drawing.Size(23, 26);
+            this.btnBuscaDNI.TabIndex = 23;
+            this.btnBuscaDNI.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscaCOD
+            // 
+            this.btnBuscaCOD.Location = new System.Drawing.Point(139, 18);
+            this.btnBuscaCOD.Name = "btnBuscaCOD";
+            this.btnBuscaCOD.Size = new System.Drawing.Size(23, 26);
+            this.btnBuscaCOD.TabIndex = 22;
+            this.btnBuscaCOD.UseVisualStyleBackColor = true;
+            // 
             // txtBusquedaDNI
             // 
             this.txtBusquedaDNI.Location = new System.Drawing.Point(67, 50);
@@ -179,13 +196,6 @@ namespace AlumnosSQL
             this.label6.TabIndex = 14;
             this.label6.Text = "DNI";
             // 
-            // txtBusquedaCod
-            // 
-            this.txtBusquedaCod.Location = new System.Drawing.Point(68, 22);
-            this.txtBusquedaCod.Name = "txtBusquedaCod";
-            this.txtBusquedaCod.Size = new System.Drawing.Size(53, 20);
-            this.txtBusquedaCod.TabIndex = 13;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -194,6 +204,13 @@ namespace AlumnosSQL
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Código";
+            // 
+            // txtBusquedaCod
+            // 
+            this.txtBusquedaCod.Location = new System.Drawing.Point(68, 22);
+            this.txtBusquedaCod.Name = "txtBusquedaCod";
+            this.txtBusquedaCod.Size = new System.Drawing.Size(53, 20);
+            this.txtBusquedaCod.TabIndex = 13;
             // 
             // cbEspecialidad
             // 
@@ -260,6 +277,7 @@ namespace AlumnosSQL
             this.btnAlta.TabIndex = 18;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // btnBaja
             // 
@@ -267,8 +285,9 @@ namespace AlumnosSQL
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(47, 44);
             this.btnBaja.TabIndex = 19;
-            this.btnBaja.Text = "Bajo";
+            this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnModificar
             // 
@@ -278,37 +297,22 @@ namespace AlumnosSQL
             this.btnModificar.TabIndex = 20;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // GridView
+            // GridDatos
             // 
-            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridView.Location = new System.Drawing.Point(16, 166);
-            this.GridView.Name = "GridView";
-            this.GridView.Size = new System.Drawing.Size(712, 201);
-            this.GridView.TabIndex = 21;
-            // 
-            // btnBuscaCOD
-            // 
-            this.btnBuscaCOD.Location = new System.Drawing.Point(139, 18);
-            this.btnBuscaCOD.Name = "btnBuscaCOD";
-            this.btnBuscaCOD.Size = new System.Drawing.Size(23, 26);
-            this.btnBuscaCOD.TabIndex = 22;
-            this.btnBuscaCOD.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscaDNI
-            // 
-            this.btnBuscaDNI.Location = new System.Drawing.Point(139, 49);
-            this.btnBuscaDNI.Name = "btnBuscaDNI";
-            this.btnBuscaDNI.Size = new System.Drawing.Size(23, 26);
-            this.btnBuscaDNI.TabIndex = 23;
-            this.btnBuscaDNI.UseVisualStyleBackColor = true;
+            this.GridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridDatos.Location = new System.Drawing.Point(16, 166);
+            this.GridDatos.Name = "GridDatos";
+            this.GridDatos.Size = new System.Drawing.Size(712, 201);
+            this.GridDatos.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 379);
-            this.Controls.Add(this.GridView);
+            this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
@@ -331,9 +335,10 @@ namespace AlumnosSQL
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +372,7 @@ namespace AlumnosSQL
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.DataGridView GridDatos;
     }
 }
 

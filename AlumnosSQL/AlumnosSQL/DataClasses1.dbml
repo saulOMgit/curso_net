@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AlumnosSQL" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA408\SQLEXPRESSSAUL;Initial Catalog=AlumnosSQL;Persist Security Info=True;User ID=sa" SettingsObjectName="AlumnosSQL.Properties.Settings" SettingsPropertyName="AlumnosSQLConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spListarAlumnos" Method="spListarAlumnos">
+    <ElementType Name="spListarAlumnosResult">
+      <Column Name="Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Turno" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Repetidor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Modulo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Especialidad" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
