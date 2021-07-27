@@ -68,6 +68,20 @@ namespace AlumnosSQL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<spListarAlumnosResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spBuscarDNI")]
+		public ISingleResult<spBuscarDNIResult> spBuscarDNI([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(10)")] string dni)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dni);
+			return ((ISingleResult<spBuscarDNIResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spBuscarCodigo")]
+		public ISingleResult<spBuscarCodigoResult> spBuscarCodigo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Codigo", DbType="Int")] System.Nullable<int> codigo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), codigo);
+			return ((ISingleResult<spBuscarCodigoResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class spListarAlumnosResult
@@ -90,6 +104,310 @@ namespace AlumnosSQL
 		private string _Especialidad;
 		
 		public spListarAlumnosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo", DbType="Int NOT NULL")]
+		public int Codigo
+		{
+			get
+			{
+				return this._Codigo;
+			}
+			set
+			{
+				if ((this._Codigo != value))
+				{
+					this._Codigo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DNI", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string DNI
+		{
+			get
+			{
+				return this._DNI;
+			}
+			set
+			{
+				if ((this._DNI != value))
+				{
+					this._DNI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Turno", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Turno
+		{
+			get
+			{
+				return this._Turno;
+			}
+			set
+			{
+				if ((this._Turno != value))
+				{
+					this._Turno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sexo", DbType="VarChar(10)")]
+		public string Sexo
+		{
+			get
+			{
+				return this._Sexo;
+			}
+			set
+			{
+				if ((this._Sexo != value))
+				{
+					this._Sexo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Repetidor", DbType="Bit")]
+		public System.Nullable<bool> Repetidor
+		{
+			get
+			{
+				return this._Repetidor;
+			}
+			set
+			{
+				if ((this._Repetidor != value))
+				{
+					this._Repetidor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modulo", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Modulo
+		{
+			get
+			{
+				return this._Modulo;
+			}
+			set
+			{
+				if ((this._Modulo != value))
+				{
+					this._Modulo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Especialidad", DbType="VarChar(25)")]
+		public string Especialidad
+		{
+			get
+			{
+				return this._Especialidad;
+			}
+			set
+			{
+				if ((this._Especialidad != value))
+				{
+					this._Especialidad = value;
+				}
+			}
+		}
+	}
+	
+	public partial class spBuscarDNIResult
+	{
+		
+		private int _Codigo;
+		
+		private string _Nombre;
+		
+		private string _DNI;
+		
+		private string _Turno;
+		
+		private string _Sexo;
+		
+		private System.Nullable<bool> _Repetidor;
+		
+		private string _Modulo;
+		
+		private string _Especialidad;
+		
+		public spBuscarDNIResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo", DbType="Int NOT NULL")]
+		public int Codigo
+		{
+			get
+			{
+				return this._Codigo;
+			}
+			set
+			{
+				if ((this._Codigo != value))
+				{
+					this._Codigo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DNI", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string DNI
+		{
+			get
+			{
+				return this._DNI;
+			}
+			set
+			{
+				if ((this._DNI != value))
+				{
+					this._DNI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Turno", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Turno
+		{
+			get
+			{
+				return this._Turno;
+			}
+			set
+			{
+				if ((this._Turno != value))
+				{
+					this._Turno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sexo", DbType="VarChar(10)")]
+		public string Sexo
+		{
+			get
+			{
+				return this._Sexo;
+			}
+			set
+			{
+				if ((this._Sexo != value))
+				{
+					this._Sexo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Repetidor", DbType="Bit")]
+		public System.Nullable<bool> Repetidor
+		{
+			get
+			{
+				return this._Repetidor;
+			}
+			set
+			{
+				if ((this._Repetidor != value))
+				{
+					this._Repetidor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modulo", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Modulo
+		{
+			get
+			{
+				return this._Modulo;
+			}
+			set
+			{
+				if ((this._Modulo != value))
+				{
+					this._Modulo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Especialidad", DbType="VarChar(25)")]
+		public string Especialidad
+		{
+			get
+			{
+				return this._Especialidad;
+			}
+			set
+			{
+				if ((this._Especialidad != value))
+				{
+					this._Especialidad = value;
+				}
+			}
+		}
+	}
+	
+	public partial class spBuscarCodigoResult
+	{
+		
+		private int _Codigo;
+		
+		private string _Nombre;
+		
+		private string _DNI;
+		
+		private string _Turno;
+		
+		private string _Sexo;
+		
+		private System.Nullable<bool> _Repetidor;
+		
+		private string _Modulo;
+		
+		private string _Especialidad;
+		
+		public spBuscarCodigoResult()
 		{
 		}
 		

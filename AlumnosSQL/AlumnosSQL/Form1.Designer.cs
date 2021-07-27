@@ -172,6 +172,7 @@ namespace AlumnosSQL
             this.btnBuscaDNI.Size = new System.Drawing.Size(23, 26);
             this.btnBuscaDNI.TabIndex = 23;
             this.btnBuscaDNI.UseVisualStyleBackColor = true;
+            this.btnBuscaDNI.Click += new System.EventHandler(this.btnBuscaDNI_Click);
             // 
             // btnBuscaCOD
             // 
@@ -180,6 +181,7 @@ namespace AlumnosSQL
             this.btnBuscaCOD.Size = new System.Drawing.Size(23, 26);
             this.btnBuscaCOD.TabIndex = 22;
             this.btnBuscaCOD.UseVisualStyleBackColor = true;
+            this.btnBuscaCOD.Click += new System.EventHandler(this.btnBuscaCOD_Click);
             // 
             // txtBusquedaDNI
             // 

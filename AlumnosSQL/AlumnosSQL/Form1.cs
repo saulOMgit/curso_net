@@ -109,5 +109,25 @@ namespace AlumnosSQL
         {
             Application.Exit();
         }
+
+        private void btnBuscaDNI_Click(object sender, EventArgs e)
+        {
+            if (txtBusquedaDNI.Text == "") { MessageBox.Show("Introduce un DNI"); }
+            else
+            {
+                string dni = txtBusquedaDNI.Text;
+                GridDatos.DataSource = ClienteLinq.spBuscarDNI(dni);
+            }
+        }
+
+        private void btnBuscaCOD_Click(object sender, EventArgs e)
+        {
+            if (txtBusquedaCod.Text == "") { MessageBox.Show("Introduce un Código"); }
+            else
+            {
+                int codigo = int.Parse(txtBusquedaCod.Text);
+                GridDatos.DataSource = ClienteLinq.spBuscarCodigo(codigo);
+            }
+        }
     }
 }
