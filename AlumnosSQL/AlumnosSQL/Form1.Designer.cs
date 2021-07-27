@@ -56,6 +56,7 @@ namespace AlumnosSQL
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.GridDatos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
@@ -307,11 +308,24 @@ namespace AlumnosSQL
             this.GridDatos.Size = new System.Drawing.Size(712, 201);
             this.GridDatos.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(734, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 44);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 379);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
@@ -373,6 +387,7 @@ namespace AlumnosSQL
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridView GridDatos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

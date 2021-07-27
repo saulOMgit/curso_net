@@ -89,7 +89,25 @@ namespace AlumnosSQL
             string especialidad = cbEspecialidad.Text;
             string modulo = cbModulo.Text;
             int repite;
+            if (chkModulo.Checked == true) { repite = 1; }
+            else { repite = 0; }
+            if (txtDNI.Text == "")
+            { MessageBox.Show("No existe un alumno con el DNI: " + dni); }
+            else
+            {
+                string cadena = "update Alumnos set nombre='" + nombre + "',turno='" + turno + "',sexo='" + sexo + "',especialidad='" + especialidad + "',modulo='" + modulo + "',repetidor='" + repite + "' WHERE DNI='"+dni+"'";
+                SqlCommand command = new SqlCommand(cadena, conexion);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Modificacion realizada");
+            }
+            conexion.Close();
+            this.listarclientes();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
