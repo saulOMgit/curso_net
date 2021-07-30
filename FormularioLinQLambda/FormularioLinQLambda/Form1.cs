@@ -59,7 +59,6 @@ namespace FormularioLinQLambda
             MyProducto.CategoryID = int.Parse(txtCat.Text);
             Norwin.SubmitChanges();
             cargarGrid();
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -68,6 +67,7 @@ namespace FormularioLinQLambda
              p.ProductName == comboBox1.SelectedItem.ToString());
             Norwin.Products.DeleteOnSubmit(MyProduct);
             Norwin.SubmitChanges();
+            cargarGrid();
         }
     }
 }
