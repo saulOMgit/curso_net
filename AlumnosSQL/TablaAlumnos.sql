@@ -17,3 +17,30 @@ Especialidad varchar(25)
 	--utilizar comandos de SQL y cadena conexión
 
 	--2 El usuario podrá realizar búsquedas por código y por DNIA, tambien con procedimientos de comando SQL.
+
+-- Listar
+
+CREATE PROCEDURE spBuscarDNI
+@dni varchar(10)
+AS
+SELECT * 
+FROM Alumnos
+WHERE DNI LIKE @dni
+
+CREATE PROCEDURE spListarAlumnos
+AS
+SELECT * 
+FROM Alumnos;
+
+CREATE PROCEDURE spBuscarCodigo
+@Codigo int
+AS
+SELECT * 
+FROM Alumnos
+WHERE Codigo LIKE @Codigo
+
+
+EXEC spListarAlumnos '12354678Q
+
+SELECT *
+FROM Alumnos
