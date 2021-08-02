@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LambdaQ" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA408\SQLEXPRESSSAUL;Initial Catalog=LambdaQ;Persist Security Info=True;User ID=sa" SettingsObjectName="SegundoEjercicioLINQViernes.Properties.Settings" SettingsPropertyName="LambdaQConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.empleados" Member="empleados">
+    <Type Name="empleados">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="apellido" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="casado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
