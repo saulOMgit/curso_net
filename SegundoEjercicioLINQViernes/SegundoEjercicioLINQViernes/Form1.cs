@@ -24,40 +24,62 @@ namespace SegundoEjercicioLINQViernes
         
         void cargarGrid() 
         {
-            var CargaGrid = from e in bdo.empleados
-                             select e;
-            GridDatos.DataSource = CargaGrid;            
+            try
+            {
+                var CargaGrid = from e in bdo.empleados
+                                select e;
+                GridDatos.DataSource = CargaGrid;
+                int numero = CargaGrid.Count();
+                txtcontar.Text = numero.ToString();
+            }
+            catch { MessageBox.Show("No se han podido cargar");}
+            
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtAge.Text == "")
+            try
             {
-                MessageBox.Show("Falta algún valor");
+              
+               
+                    empleados MyEmpleado = new empleados();
+                    MyEmpleado.id = int.Parse(txtID.Text);
+                    MyEmpleado.nombre = txtName.Text;
+                    MyEmpleado.apellido = txtSurname.Text;
+                    MyEmpleado.edad = int.Parse(txtAge.Text);
+                    bool casao = false;
+
+                    if (chkMarried.Checked == true)
+                    { casao = true; }
+                    else { }
+
+                    MyEmpleado.casado = casao;
+                    bdo.empleados.InsertOnSubmit(MyEmpleado);
+                    bdo.SubmitChanges();
+                    cargarGrid();
+                    txtID.Text = "";
+                    txtName.Text = "";
+                    txtSurname.Text = "";
+                    txtAge.Text = "";
+                    txtBuscar.Text = "";
+                    chkMarried.Checked = false;
+
             }
-            else
+            catch 
             {
-                empleados MyEmpleado = new empleados();
-                MyEmpleado.id = int.Parse(txtID.Text);
-                MyEmpleado.nombre = txtName.Text;
-                MyEmpleado.apellido = txtSurname.Text;
-                MyEmpleado.edad = int.Parse(txtAge.Text);
-                bool casao = false;
+                if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtAge.Text == "")
+                {
+                    MessageBox.Show("Falta algún valor");
+                }
 
-                if (chkMarried.Checked == true)
-                { casao = true; }
-                else { }
-
-                MyEmpleado.casado = casao;
-                bdo.empleados.InsertOnSubmit(MyEmpleado);
-                bdo.SubmitChanges();
-                cargarGrid();
             }
+
+
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "")
+            if (txtBuscar.Text == "")
             {
                 MessageBox.Show("Falta ID");
             }
@@ -68,12 +90,19 @@ namespace SegundoEjercicioLINQViernes
                 bdo.empleados.DeleteOnSubmit(MyEmplead);
                 bdo.SubmitChanges();
                 cargarGrid();
+                cargarGrid();
+                txtID.Text = "";
+                txtName.Text = "";
+                txtSurname.Text = "";
+                txtAge.Text = "";
+                txtBuscar.Text = "";
+                chkMarried.Checked = false;
             }
         }
 
         private void btnModif_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "")
+            if (txtBuscar.Text == "")
             {
                 MessageBox.Show("Falta algún valor");
             }
@@ -94,7 +123,23 @@ namespace SegundoEjercicioLINQViernes
                 MyEmpleao.casado = casao;
                 bdo.SubmitChanges();
                 cargarGrid();
+                cargarGrid();
+                txtID.Text = "";
+                txtName.Text = "";
+                txtSurname.Text = "";
+                txtAge.Text = "";
+                txtBuscar.Text = "";
+                chkMarried.Checked = false;
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            empleados MyEmpleado = bdo.empleados.Single(q => q.id == int.Parse(txtBuscar.Text));
+
+            string variablet = txtBuscar.Text;
+
+           
         }
     }
 }

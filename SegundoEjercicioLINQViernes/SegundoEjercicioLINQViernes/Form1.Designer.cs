@@ -45,6 +45,8 @@ namespace SegundoEjercicioLINQViernes
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.chkMarried = new System.Windows.Forms.CheckBox();
+            this.txtcontar = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,6 +167,7 @@ namespace SegundoEjercicioLINQViernes
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label5
             // 
@@ -186,11 +189,29 @@ namespace SegundoEjercicioLINQViernes
             this.chkMarried.Text = "Married";
             this.chkMarried.UseVisualStyleBackColor = true;
             // 
+            // txtcontar
+            // 
+            this.txtcontar.Location = new System.Drawing.Point(578, 326);
+            this.txtcontar.Name = "txtcontar";
+            this.txtcontar.Size = new System.Drawing.Size(30, 20);
+            this.txtcontar.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(495, 329);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Nº Empleados:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 322);
+            this.ClientSize = new System.Drawing.Size(622, 358);
+            this.Controls.Add(this.txtcontar);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.chkMarried);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBuscar);
@@ -234,6 +255,8 @@ namespace SegundoEjercicioLINQViernes
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkMarried;
+        private System.Windows.Forms.TextBox txtcontar;
+        private System.Windows.Forms.Label label6;
     }
 }
 
