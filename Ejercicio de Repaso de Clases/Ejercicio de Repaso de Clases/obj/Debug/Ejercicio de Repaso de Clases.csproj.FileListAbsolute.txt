@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\bin\Debug\Ejercicio de Repaso de Clases.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\bin\Debug\Ejercicio de Repaso de Clases.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\bin\Debug\Ejercicio de Repaso de Clases.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\obj\Debug\Ejercicio de Repaso de Clases.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\obj\Debug\Ejercicio de Repaso de Clases.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\obj\Debug\Ejercicio de Repaso de Clases.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Ejercicio de Repaso de Clases\Ejercicio de Repaso de Clases\obj\Debug\Ejercicio de Repaso de Clases.pdb
