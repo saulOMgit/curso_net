@@ -34,7 +34,6 @@ namespace HucanetLINQ
             this.txtInscripcion = new System.Windows.Forms.TextBox();
             this.txtNomApe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDire = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,11 +43,12 @@ namespace HucanetLINQ
             this.rdMale = new System.Windows.Forms.RadioButton();
             this.rdFemale = new System.Windows.Forms.RadioButton();
             this.GridDatos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,13 +93,6 @@ namespace HucanetLINQ
             this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre y Apellidos";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(115, 160);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(100, 20);
-            this.txtFecha.TabIndex = 6;
             // 
             // label4
             // 
@@ -181,14 +174,15 @@ namespace HucanetLINQ
             this.GridDatos.Size = new System.Drawing.Size(322, 185);
             this.GridDatos.TabIndex = 14;
             // 
-            // button1
+            // btnCrear
             // 
-            this.button1.Location = new System.Drawing.Point(12, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCrear.Location = new System.Drawing.Point(12, 259);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(43, 23);
+            this.btnCrear.TabIndex = 15;
+            this.btnCrear.Text = "Create";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnRead
             // 
@@ -198,15 +192,17 @@ namespace HucanetLINQ
             this.btnRead.TabIndex = 16;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
-            // button3
+            // btnUpdate
             // 
-            this.button3.Location = new System.Drawing.Point(110, 259);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(110, 259);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(43, 23);
+            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBorrar
             // 
@@ -216,6 +212,7 @@ namespace HucanetLINQ
             this.btnBorrar.TabIndex = 18;
             this.btnBorrar.Text = "Delete";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnExit
             // 
@@ -225,17 +222,26 @@ namespace HucanetLINQ
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(116, 163);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(112, 20);
+            this.dtpFecha.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 294);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.rdFemale);
             this.Controls.Add(this.rdMale);
@@ -244,7 +250,6 @@ namespace HucanetLINQ
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDire);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNomApe);
             this.Controls.Add(this.label3);
@@ -253,6 +258,7 @@ namespace HucanetLINQ
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,7 +272,6 @@ namespace HucanetLINQ
         private System.Windows.Forms.TextBox txtInscripcion;
         private System.Windows.Forms.TextBox txtNomApe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDire;
         private System.Windows.Forms.Label label5;
@@ -276,11 +281,12 @@ namespace HucanetLINQ
         private System.Windows.Forms.RadioButton rdMale;
         private System.Windows.Forms.RadioButton rdFemale;
         private System.Windows.Forms.DataGridView GridDatos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnRead;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }
 

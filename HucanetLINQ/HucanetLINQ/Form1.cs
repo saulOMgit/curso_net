@@ -16,5 +16,68 @@ namespace HucanetLINQ
         {
             InitializeComponent();
         }
+        DataClasses1DataContext bdo = new DataClasses1DataContext();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cargarGrid();
+        }
+
+        void cargarGrid() 
+        {
+            var cargaGrid = from p in bdo.Enfermo select p;
+            GridDatos.DataSource = cargaGrid;
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            Enfermo MyEnfermo = new Enfermo();
+            MyEnfermo.inscripcion = int.Parse(txtInscripcion.Text);
+            MyEnfermo.Apellido = txtNomApe.Text;
+            string genero;
+            if (rdMale.Checked==true) { genero="M";}
+            else { genero = "F";}
+            MyEnfermo.S = genero;
+            MyEnfermo.Fecha_Nac = dtpFecha.Value;
+            MyEnfermo.Direccion = txtDire.Text;
+            MyEnfermo.NSS = int.Parse(txtNumSS.Text);
+            bdo.Enfermo.InsertOnSubmit(MyEnfermo);
+            bdo.SubmitChanges();
+            cargarGrid();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Enfermo MyEnfermo = bdo.Enfermo.Single(p =>
+            p.inscripcion == int.Parse(txtInscripcion.Text));
+            MyEnfermo.Apellido = txtNomApe.Text;
+            string genero;
+            if (rdMale.Checked == true) { genero = "M"; }
+            else { genero = "F"; }
+            MyEnfermo.S = genero;
+            MyEnfermo.Fecha_Nac = dtpFecha.Value;
+            MyEnfermo.Direccion = txtDire.Text;
+            MyEnfermo.NSS = int.Parse(txtNumSS.Text);
+            bdo.SubmitChanges();
+            cargarGrid();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Enfermo MyEnfermo = bdo.Enfermo.Single(p =>
+              p.inscripcion == int.Parse(txtInscripcion.Text));
+            bdo.Enfermo.DeleteOnSubmit(MyEnfermo);
+            bdo.SubmitChanges();
+            cargarGrid();
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NO DISPONIBLE\n14.99$ PARA DESBLOQUEAR");
+        }
     }
 }
