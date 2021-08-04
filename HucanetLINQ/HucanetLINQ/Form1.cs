@@ -78,6 +78,7 @@ namespace HucanetLINQ
         private void btnRead_Click(object sender, EventArgs e)
         {
             MessageBox.Show("NO DISPONIBLE\n14.99$ PARA DESBLOQUEAR");
+
         }
     }
 }
