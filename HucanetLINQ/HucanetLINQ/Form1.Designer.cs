@@ -147,6 +147,7 @@ namespace HucanetLINQ
             // rdMale
             // 
             this.rdMale.AutoSize = true;
+            this.rdMale.Checked = true;
             this.rdMale.Location = new System.Drawing.Point(115, 132);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(48, 17);
