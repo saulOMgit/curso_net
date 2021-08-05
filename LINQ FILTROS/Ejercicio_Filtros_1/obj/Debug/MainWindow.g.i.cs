@@ -161,7 +161,7 @@ namespace Ejercicio_Filtros {
         #line hidden
         
         
-        #line 35 "..\..\MainWindow.xaml"
+        #line 36 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Button1;
         
@@ -169,7 +169,7 @@ namespace Ejercicio_Filtros {
         #line hidden
         
         
-        #line 36 "..\..\MainWindow.xaml"
+        #line 37 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox CheckBox2;
         
@@ -302,7 +302,7 @@ namespace Ejercicio_Filtros {
             case 16:
             this.Button1 = ((System.Windows.Controls.Button)(target));
             
-            #line 35 "..\..\MainWindow.xaml"
+            #line 36 "..\..\MainWindow.xaml"
             this.Button1.Click += new System.Windows.RoutedEventHandler(this.Button1_Click);
             
             #line default
@@ -311,13 +311,13 @@ namespace Ejercicio_Filtros {
             case 17:
             this.CheckBox2 = ((System.Windows.Controls.CheckBox)(target));
             
-            #line 36 "..\..\MainWindow.xaml"
+            #line 37 "..\..\MainWindow.xaml"
             this.CheckBox2.Unchecked += new System.Windows.RoutedEventHandler(this.CheckBox2_UnChecked);
             
             #line default
             #line hidden
             
-            #line 36 "..\..\MainWindow.xaml"
+            #line 37 "..\..\MainWindow.xaml"
             this.CheckBox2.Checked += new System.Windows.RoutedEventHandler(this.CheckBox2_Checked);
             
             #line default
