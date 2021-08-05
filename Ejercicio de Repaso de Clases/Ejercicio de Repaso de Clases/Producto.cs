@@ -46,7 +46,7 @@ namespace Ejercicio_de_Repaso_de_Clases
             get { return _categoria; }
             set { _categoria = value; }
         }
-
+        //Variable para mostrar los datos, funciona sin categoria
         public void Mostrar() 
         {
             Console.WriteLine("Nombre: " + _nombre + "\nPrecio: " + _precio + "\nCategoria: " + _categoria);
