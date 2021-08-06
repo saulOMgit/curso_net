@@ -166,5 +166,56 @@ namespace Ejercicio_Filtros
             }
             else cargarGridCurso();
         }
+        //Filtros fecha
+        void cargarfechas(DateTime fecha1, DateTime fecha2)
+        {
+
+            string curso = ComboBox1.Text;
+
+            var listagrid = from f in filtros.datosjueves
+                            where f.Curso == curso &&
+                f.Fecha_Ins >= fecha1 && f.Fecha_Ins <= fecha2
+                            select f;
+            DGV1.ItemsSource = listagrid;
+
+        }
+
+        private void btnFiltrarFecha_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Filtrar por fecha");
+            if (CheckBox1.IsChecked == true && CheckBox2.IsChecked == true)
+                cargarfechas(DatePicker1.DisplayDate, DatePicker2.DisplayDate);
+            else if (CheckBox4.IsChecked == true && CheckBox5.IsChecked == true)
+                cargarfechaContratacion(DatePicker3.DisplayDate, DatePicker4.DisplayDate);
+
+
+
+
+        }
+
+        void cargarfechaContratacion(DateTime fechaCon1, DateTime fechaCon2)
+        {
+            string curso = ComboBox1.Text;
+            var listagrid = from f in filtros.datosjueves
+                            where f.Curso == curso &&
+                            f.Fecha_Cont >= fechaCon1 && f.Fecha_Cont <= fechaCon2
+                            select f;
+            DGV1.ItemsSource = listagrid;
+        }
+
+        void Cargartodas(DateTime f1,DateTime f2, DateTime f3, DateTime f4) 
+        {
+            var listargrid = from f in filtros.datosjueves
+                             where
+                             f.Fecha_Cont >= f1 && f.Fecha_Cont <= f2 &&
+                             f.Fecha_Cont >= f3 && f.Fecha_Cont <= f4
+                             select f;
+            DGV1.ItemsSource = listargrid;
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            cargarGrid();
+        }
     }
 }
