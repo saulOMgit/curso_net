@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="VentanaInsertar" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="TxtID" HorizontalAlignment="Left" Height="23" Margin="96,20,0,0"
+                 Text="" VerticalAlignment="Top" Width="75"/>
+
         <TextBox x:Name="TxtNombre" HorizontalAlignment="Left" Height="23" Margin="96,50,0,0"
                  Text="" VerticalAlignment="Top" Width="75"/>
         <ComboBox x:Name="cmbEspec" HorizontalAlignment="Left" Margin="96,89,0,0"
@@ -15,7 +18,8 @@
             <ComboBoxItem>Religión</ComboBoxItem>
             <ComboBoxItem>Sus Labores</ComboBoxItem>
         </ComboBox>
-        <Button Content="Insertar" HorizontalAlignment="Left" Margin="96,127,0,0" VerticalAlignment="Top" Width="75" Height="19"/>
+        <Button Content="Insertar" HorizontalAlignment="Left" Margin="96,127,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="Button_Click"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="81" Height="26"/>
         <Label Content="Especialidad" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="74" Height="26"/>
     </Grid>

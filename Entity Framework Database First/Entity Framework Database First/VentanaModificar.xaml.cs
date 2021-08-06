@@ -19,9 +19,26 @@ namespace Entity_Framework_Database_First
     /// </summary>
     public partial class VentanaModificar : Window
     {
-        public VentanaModificar()
+        EscuelaEntities DbEntityes = new EscuelaEntities();
+        int id;
+        
+        public VentanaModificar(int idProfesor)
         {
             InitializeComponent();
+            id = idProfesor;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Profesores MyProfe = (from m in DbEntityes.Profesores
+                                  where m.Id == id
+                                  select m).Single();
+            MyProfe.Nombre = TxtNombre.Text;
+            MyProfe.Especialidad = cmbEspec.Text;
+            DbEntityes.SaveChanges();
+            MainWindow.ControlDatagrid.ItemsSource = DbEntityes.Profesores.ToList();
+            this.Hide();
+
         }
     }
 }

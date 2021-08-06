@@ -19,9 +19,27 @@ namespace Entity_Framework_Database_First
     /// </summary>
     public partial class VentanaInsertar : Window
     {
+        EscuelaEntities DbEntityes = new EscuelaEntities();
         public VentanaInsertar()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //int idulti = MyDataGrid.Items.Count+1;
+            Profesores MyProfe = new Profesores()
+            {
+                Id = int.Parse(TxtID.Text),
+                Nombre = TxtNombre.Text,
+                Especialidad = cmbEspec.Text
+            };
+            DbEntityes.Profesores.Add(MyProfe);
+            DbEntityes.SaveChanges();
+            MainWindow.ControlDatagrid.ItemsSource = DbEntityes.Profesores.ToList();
+            this.Hide();
+        }
+
+        }
     }
-}
+

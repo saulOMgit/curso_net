@@ -46,15 +46,15 @@ namespace Entity_Framework_Database_First
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //El segundo botón llama al cuadro modificar
-            //int id = (MyDG.SelectedItem as Profesores).Id;
-            VentanaModificar Vcambiar = new VentanaModificar();
+            int id = (MyDG.SelectedItem as Profesores).Id;
+            VentanaModificar Vcambiar = new VentanaModificar(id);
             Vcambiar.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             //eliminar
-            //int id = (MyDG.SelectedItem as Profesores).Id;
+            int id = (MyDG.SelectedItem as Profesores).Id;
             var deleteProfe = DbEntityes.Profesores.Where(m =>
               m.Id == id).Single();
             DbEntityes.Profesores.Remove(deleteProfe);
