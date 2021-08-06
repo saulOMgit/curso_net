@@ -9,19 +9,19 @@
  
     <Grid>
         <DockPanel>
-            <DataGrid Name="MyDG" x:FieldModifier="public" ColumnWidth="*" Margin="0,0,0,45">
-                <DataGrid.Columns>
+            <DataGrid Name="MyDG" x:FieldModifier="public" ColumnWidth="*" Margin="0,0,0,45" SelectionChanged="MyDG_SelectionChanged">
+                <!--<DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
                     <DataGridTextColumn Header="Especialidad" Binding="{Binding Especialidad}"/>
                     <DataGridTextColumn Header="Opciones"/>
-                </DataGrid.Columns>
+                </DataGrid.Columns>-->
             </DataGrid>
         </DockPanel>
         <Grid>
-            <Button Content="Añadir" Width="76" Margin="-522,384,446,8"/>
-            <Button Content="Modificar" Height="28" VerticalAlignment="Top" Width="75" Margin="-417,384,342,0"/>
-            <Button Content="Eliminar" Height="28" VerticalAlignment="Top" Margin="-308,384,232,0"/>
+            <Button Content="Añadir" Width="76" Margin="-700,384,0,8" Click="Button_Click"/>
+            <Button Content="Modificar" Height="28" VerticalAlignment="Top" Width="75" Margin="-517,384,0,0" Click="Button_Click_1"/>
+            <Button Content="Eliminar" Height="28" VerticalAlignment="Top" Width="75" Margin="-308,384,0,0" Click="Button_Click_2"/>
         </Grid>
     </Grid>
 </Window>

@@ -1,0 +1,25 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\Entity Framework Database First.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\Entity Framework Database First.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\Entity Framework Database First.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\EntityFramework.dll
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\EntityFramework.xml
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\MainWindow.g.cs
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\VentanaInsertar.g.cs
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\VentanaModificar.g.cs
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\App.g.cs
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First_Content.g.cs
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First_MarkupCompile.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First_MarkupCompile.lref
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\MainWindow.baml
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\VentanaInsertar.baml
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\VentanaModificar.baml
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.g.resources
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity_Framework_Database_First.Properties.Resources.resources
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.csproj.CopyComplete
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Entity Framework Database First\Entity Framework Database First\obj\Debug\Entity Framework Database First.pdb
