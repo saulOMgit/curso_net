@@ -213,6 +213,7 @@ namespace Ejercicio_Filtros
             DGV1.ItemsSource = listargrid;
         }
 
+
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             cargarGrid();
