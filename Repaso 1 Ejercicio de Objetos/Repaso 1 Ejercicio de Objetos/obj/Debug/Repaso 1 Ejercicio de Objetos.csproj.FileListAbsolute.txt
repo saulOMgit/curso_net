@@ -4,3 +4,4 @@ C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso 1 Ejercicio de
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso 1 Ejercicio de Objetos\Repaso 1 Ejercicio de Objetos\bin\Debug\Repaso 1 Ejercicio de Objetos.pdb
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso 1 Ejercicio de Objetos\Repaso 1 Ejercicio de Objetos\obj\Debug\Repaso 1 Ejercicio de Objetos.exe
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso 1 Ejercicio de Objetos\Repaso 1 Ejercicio de Objetos\obj\Debug\Repaso 1 Ejercicio de Objetos.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso 1 Ejercicio de Objetos\Repaso 1 Ejercicio de Objetos\obj\Debug\Repaso 1 Ejercicio de Objetos.csproj.AssemblyReference.cache

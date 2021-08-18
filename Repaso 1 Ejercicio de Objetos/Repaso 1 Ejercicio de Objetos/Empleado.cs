@@ -31,5 +31,18 @@ namespace Repaso_1_Ejercicio_de_Objetos
             get { return _sueldo; }
             set { _sueldo = value; }
         }
+
+        public void calcularSueldo() 
+        {
+            if (this.Ptipocontrato == "F" || this.Ptipocontrato == "f")
+            {
+                this.Psueldo = Psueldo + 300;
+
+            }
+           else if (this.Ptipocontrato=="T" || this.Ptipocontrato=="t")
+            {
+                this.Psueldo = Psueldo + 250;
+            }
+        }
     }
 }
