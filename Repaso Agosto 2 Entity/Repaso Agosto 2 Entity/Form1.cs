@@ -31,51 +31,68 @@ namespace Repaso_Agosto_2_Entity
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Clientes Misclientes = new Clientes()
+            try
             {
-                DNI = txtDNI.Text,
-                Nombre = txtNombre.Text,
-                Apellidos = txtApellidos.Text,
-                Estado_Civil = cbEstadoCivil.Text,
-                Email = txtEmail.Text,
-                Telefono = txtTelefono.Text,
-                Fecha_Nacimiento = dtpFechaNaci.Value
-            };
-            //LLAMAMOS AL CONTEXTO DE ENTIDADES Y AÑADIMOS AL OBJETO CLIENTE
-            ClientesEntity.Clientes.Add(Misclientes);
-            //GUARDAR EL NUEVO REGISTRO EN LA BASE DE DATOS
-            ClientesEntity.SaveChanges();
-            CargarGrid();
+                if (txtDNI.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "")
+                { MessageBox.Show("Falta algún registro"); }
+                else 
+                {
+                    Clientes Misclientes = new Clientes()
+                    {
+                        DNI = txtDNI.Text,
+                        Nombre = txtNombre.Text,
+                        Apellidos = txtApellidos.Text,
+                        Estado_Civil = cbEstadoCivil.Text,
+                        Email = txtEmail.Text,
+                        Telefono = txtTelefono.Text,
+                        Fecha_Nacimiento = dtpFechaNaci.Value
+                    };
+                    //LLAMAMOS AL CONTEXTO DE ENTIDADES Y AÑADIMOS AL OBJETO CLIENTE
+                    ClientesEntity.Clientes.Add(Misclientes);
+                    //GUARDAR EL NUEVO REGISTRO EN LA BASE DE DATOS
+                    ClientesEntity.SaveChanges();
+                    CargarGrid();
+                }
+            }
+            catch { MessageBox.Show("Clave duplicada"); }
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            String TextoDNI = txtDNI.Text;
-            var deleteCliente = ClientesEntity.Clientes.Where(c => c.DNI == TextoDNI).Single();
-            ClientesEntity.Clientes.Remove(deleteCliente);
-            ClientesEntity.SaveChanges();
-            CargarGrid();
+            try
+            {
+                String TextoDNI = txtDNI.Text;
+                var deleteCliente = ClientesEntity.Clientes.Where(c => c.DNI == TextoDNI).Single();
+                ClientesEntity.Clientes.Remove(deleteCliente);
+                ClientesEntity.SaveChanges();
+                CargarGrid();
+            }
+            catch { MessageBox.Show("Registro no valido"); }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //DEFINIR UNA VARIABLE PARA EL DNI, OJO DEBERIA ESTAR CONTROLADO
-            String TextoDNI = txtDNI.Text;
-            //MEDIANTE LINQ OBTENEMOS EL CLIENTE
-            Clientes MyCliente = (from c in ClientesEntity.Clientes where c.DNI == TextoDNI select c).Single();
+            try
+            {
+                //DEFINIR UNA VARIABLE PARA EL DNI, OJO DEBERIA ESTAR CONTROLADO
+                String TextoDNI = txtDNI.Text;
+                //MEDIANTE LINQ OBTENEMOS EL CLIENTE
+                Clientes MyCliente = (from c in ClientesEntity.Clientes where c.DNI == TextoDNI select c).Single();
 
-            //DEFINIMOS LOS ATRIBUTOS DEL BOJETO MyCLIENTE
-            
-            MyCliente.Nombre = txtNombre.Text;
-            MyCliente.Apellidos = txtApellidos.Text;
-            MyCliente.Email = txtEmail.Text;
-            MyCliente.Telefono = txtTelefono.Text;
-            MyCliente.Estado_Civil = cbEstadoCivil.Text;
-            MyCliente.Fecha_Nacimiento = dtpFechaNaci.Value;
-            //HACEMOS SALVADO EN LA BBDD
-            ClientesEntity.SaveChanges();            
-            CargarGrid();
+                //DEFINIMOS LOS ATRIBUTOS DEL BOJETO MyCLIENTE
+
+                MyCliente.Nombre = txtNombre.Text;
+                MyCliente.Apellidos = txtApellidos.Text;
+                MyCliente.Email = txtEmail.Text;
+                MyCliente.Telefono = txtTelefono.Text;
+                MyCliente.Estado_Civil = cbEstadoCivil.Text;
+                MyCliente.Fecha_Nacimiento = dtpFechaNaci.Value;
+                //HACEMOS SALVADO EN LA BBDD
+                ClientesEntity.SaveChanges();
+                CargarGrid();
+            }
+            catch { MessageBox.Show("Registro no valido"); }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -108,6 +125,9 @@ namespace Repaso_Agosto_2_Entity
             txtTelefono.Text = BuscarCliente.Telefono;
             cbEstadoCivil.Text = BuscarCliente.Estado_Civil;
             dtpFechaNaci.Text = BuscarCliente.Fecha_Nacimiento.ToString();
+
+            GridDatos.CurrentCell = GridDatos.Rows[0].Cells[0];
+
         }
 
         private void btnmuyalante_Click(object sender, EventArgs e)
@@ -122,6 +142,11 @@ namespace Repaso_Agosto_2_Entity
             txtTelefono.Text = BuscarCliente.Telefono;
             cbEstadoCivil.Text = BuscarCliente.Estado_Civil;
             dtpFechaNaci.Text = BuscarCliente.Fecha_Nacimiento.ToString();
+
+            //cargar el grid de datos
+            int filas = GridDatos.RowCount;
+            GridDatos.CurrentCell = GridDatos.Rows[filas-1].Cells[0];
+
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -167,6 +192,21 @@ namespace Repaso_Agosto_2_Entity
             }
             catch { MessageBox.Show("No hay más registros"); }
 
+
+        }
+
+        private void GridDatos_SelectionChanged(object sender, EventArgs e)
+        {
+            int siguiente = GridDatos.CurrentRow.Index;
+
+
+            txtDNI.Text = GridDatos.Rows[siguiente].Cells[0].Value.ToString();
+            txtNombre.Text = GridDatos.Rows[siguiente].Cells[1].Value.ToString();
+            txtApellidos.Text = GridDatos.Rows[siguiente].Cells[2].Value.ToString();
+            cbEstadoCivil.Text = GridDatos.Rows[siguiente].Cells[3].Value.ToString();
+            txtTelefono.Text = GridDatos.Rows[siguiente].Cells[4].Value.ToString();
+            txtEmail.Text = GridDatos.Rows[siguiente].Cells[5].Value.ToString();
+            dtpFechaNaci.Text = GridDatos.Rows[siguiente].Cells[6].Value.ToString();
 
         }
     }

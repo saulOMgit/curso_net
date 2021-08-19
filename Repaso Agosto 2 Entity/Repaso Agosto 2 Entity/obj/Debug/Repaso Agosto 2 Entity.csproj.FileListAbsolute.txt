@@ -5,7 +5,6 @@ C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entit
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\bin\Debug\EntityFramework.xml
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.csproj.AssemblyReference.cache
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso_Agosto_2_Entity.Form1.resources
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso_Agosto_2_Entity.Properties.Resources.resources
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.csproj.GenerateResource.cache

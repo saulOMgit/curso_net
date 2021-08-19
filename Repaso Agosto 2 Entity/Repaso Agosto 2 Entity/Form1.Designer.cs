@@ -192,6 +192,7 @@ namespace Repaso_Agosto_2_Entity
             this.GridDatos.Name = "GridDatos";
             this.GridDatos.Size = new System.Drawing.Size(680, 157);
             this.GridDatos.TabIndex = 16;
+            this.GridDatos.SelectionChanged += new System.EventHandler(this.GridDatos_SelectionChanged);
             // 
             // btnPrimero
             // 
