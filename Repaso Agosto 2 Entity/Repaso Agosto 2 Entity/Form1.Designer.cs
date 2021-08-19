@@ -46,7 +46,7 @@ namespace Repaso_Agosto_2_Entity
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.GridDatos = new System.Windows.Forms.DataGridView();
-            this.btnMuyAtras = new System.Windows.Forms.Button();
+            this.btnPrimero = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
             this.btnadelante = new System.Windows.Forms.Button();
             this.btnmuyalante = new System.Windows.Forms.Button();
@@ -193,14 +193,15 @@ namespace Repaso_Agosto_2_Entity
             this.GridDatos.Size = new System.Drawing.Size(680, 157);
             this.GridDatos.TabIndex = 16;
             // 
-            // btnMuyAtras
+            // btnPrimero
             // 
-            this.btnMuyAtras.Location = new System.Drawing.Point(823, 265);
-            this.btnMuyAtras.Name = "btnMuyAtras";
-            this.btnMuyAtras.Size = new System.Drawing.Size(45, 30);
-            this.btnMuyAtras.TabIndex = 17;
-            this.btnMuyAtras.Text = "|<";
-            this.btnMuyAtras.UseVisualStyleBackColor = true;
+            this.btnPrimero.Location = new System.Drawing.Point(823, 265);
+            this.btnPrimero.Name = "btnPrimero";
+            this.btnPrimero.Size = new System.Drawing.Size(45, 30);
+            this.btnPrimero.TabIndex = 17;
+            this.btnPrimero.Text = "|<";
+            this.btnPrimero.UseVisualStyleBackColor = true;
+            this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
             // 
             // btnatras
             // 
@@ -210,6 +211,7 @@ namespace Repaso_Agosto_2_Entity
             this.btnatras.TabIndex = 18;
             this.btnatras.Text = "<";
             this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
             // btnadelante
             // 
@@ -219,6 +221,7 @@ namespace Repaso_Agosto_2_Entity
             this.btnadelante.TabIndex = 19;
             this.btnadelante.Text = ">";
             this.btnadelante.UseVisualStyleBackColor = true;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnmuyalante
             // 
@@ -228,6 +231,7 @@ namespace Repaso_Agosto_2_Entity
             this.btnmuyalante.TabIndex = 20;
             this.btnmuyalante.Text = ">|";
             this.btnmuyalante.UseVisualStyleBackColor = true;
+            this.btnmuyalante.Click += new System.EventHandler(this.btnmuyalante_Click);
             // 
             // btnModificar
             // 
@@ -258,6 +262,7 @@ namespace Repaso_Agosto_2_Entity
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtpFechaNaci
             // 
@@ -291,7 +296,7 @@ namespace Repaso_Agosto_2_Entity
             this.Controls.Add(this.btnmuyalante);
             this.Controls.Add(this.btnadelante);
             this.Controls.Add(this.btnatras);
-            this.Controls.Add(this.btnMuyAtras);
+            this.Controls.Add(this.btnPrimero);
             this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnRegistrar);
@@ -335,7 +340,7 @@ namespace Repaso_Agosto_2_Entity
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView GridDatos;
-        private System.Windows.Forms.Button btnMuyAtras;
+        private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Button btnatras;
         private System.Windows.Forms.Button btnadelante;
         private System.Windows.Forms.Button btnmuyalante;
