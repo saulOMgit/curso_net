@@ -44,6 +44,14 @@
         <Association Name="EditorialBook">
           <End Type="Model1.Editorial" Role="Editorial" Multiplicity="1" />
           <End Type="Model1.Book" Role="Book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Editorial">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Book">
+              <PropertyRef Name="IdEditorial" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
       </Schema>
     </edmx:ConceptualModels>
