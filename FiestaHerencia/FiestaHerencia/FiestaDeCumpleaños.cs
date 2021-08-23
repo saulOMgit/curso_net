@@ -26,5 +26,38 @@ namespace FiestaHerencia
 
         public string PTextoPastel
         { get { return _TextoPastel; } set { _TextoPastel = value; } }
+
+        public void CalcularCostoDeDecoracion()
+        {
+            if (PDecora == true)
+            {
+                if (PNumeroDePersonas > 20)
+                {
+                    PCostoDeDecoracion = PNumeroDePersonas * 200;
+                }
+                else { PCostoDeDecoracion = PNumeroDePersonas * 160; }
+            }
+            else { PCostoDeDecoracion = 0; }
+        }
+
+        public void CalcularCosto()
+        {
+            if (PNumeroDePersonas > 4) 
+            {
+                _TamañoPastel = 100;
+            }
+            else { _TamañoPastel = 50; }
+            double total = 0;
+            if (PNumeroDePersonas > 20)
+            {
+                total = (PCostodeComidaPorPersona * PNumeroDePersonas) + PCostoDeDecoracion + PbonoExtra+_TamañoPastel;
+
+            }
+            else
+            {
+                total = (PCostodeComidaPorPersona * PNumeroDePersonas) + PCostoDeDecoracion+_TamañoPastel;
+            }
+            Console.WriteLine("Un total de " + total + " leuros");
+        }
     }
 }

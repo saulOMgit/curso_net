@@ -51,11 +51,14 @@ namespace FiestaHerencia
         public bool PDecora
         { get { return _Decora; } set { _Decora = value; } }
 
-        public void CalcularCostoDeDecoracion() 
-        { }
+        public void CalcularCostoDeDecoracion()
+        {        
+        }
 
         public void CalcularCosto() 
-        { }
+        { 
+  
+        }
 
 
     }
