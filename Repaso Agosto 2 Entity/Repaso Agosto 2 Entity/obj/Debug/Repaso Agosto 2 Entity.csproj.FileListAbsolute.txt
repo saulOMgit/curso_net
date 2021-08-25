@@ -12,3 +12,4 @@ C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entit
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.csproj.CopyComplete
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.exe
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Repaso Agosto 2 Entity\Repaso Agosto 2 Entity\obj\Debug\Repaso Agosto 2 Entity.csproj.AssemblyReference.cache
