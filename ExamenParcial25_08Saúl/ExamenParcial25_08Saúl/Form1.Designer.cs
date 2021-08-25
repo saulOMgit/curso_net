@@ -107,6 +107,7 @@ namespace ExamenParcial25_08Saúl
             this.cbProductos.Name = "cbProductos";
             this.cbProductos.Size = new System.Drawing.Size(121, 21);
             this.cbProductos.TabIndex = 7;
+            this.cbProductos.SelectedIndexChanged += new System.EventHandler(this.cbProductos_SelectedIndexChanged);
             // 
             // btnAñadir
             // 

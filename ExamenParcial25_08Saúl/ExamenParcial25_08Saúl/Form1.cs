@@ -32,7 +32,6 @@ namespace ExamenParcial25_08Saúl
         {
             var cargarGrid = from u in dbExamen.PRODUCTOS select u;
             GridDatos.DataSource = cargarGrid;
-            CargarCombo();
         }
 
         void CargarCombo() 
@@ -46,33 +45,39 @@ namespace ExamenParcial25_08Saúl
         {
             try
             {
-                //DEFINIMOS PRODUCTO
-                PRODUCTOS MyProducto = new PRODUCTOS();
-
-                //INSERTAMOS LOS CAMPOS
-                MyProducto.NombreProducto = txtNuevoProducto.Text;
-                MyProducto.PrecioUnidad = decimal.Parse(txtPrecioUni.Text);
-                MyProducto.UnidadStock = int.Parse(txtUnidadesStock.Text);
-
-                //AÑADIMOS EL REGISTRO A LA BASE DE DATOS
-                dbExamen.PRODUCTOS.InsertOnSubmit(MyProducto);
-                //CONFIRMAMOS
-                dbExamen.SubmitChanges();
-                //CARGAMOS GRID PARA VER LOS RESULTADOS
-                CargarGrid();
-
-                //LIMPIAMOS LOS CAMPOS
-                txtNuevoProducto.Text = "";
-                txtPrecioUni.Text = "";
-                txtUnidadesStock.Text = "";
-            }
-            catch 
-            {
-                if (txtNuevoProducto.Text == "" || txtPrecioUni.Text == "" || txtUnidadesStock.Text == "") 
+                if (txtNuevoProducto.Text == "" || txtPrecioUni.Text == "" || txtUnidadesStock.Text == "")
                 {
                     MessageBox.Show("Falta algún dato");
                 }
-                else { MessageBox.Show("Valor incorrecto"); }
+                else
+                {
+                    //DEFINIMOS PRODUCTO
+                    PRODUCTOS MyProducto = new PRODUCTOS();
+
+                    //INSERTAMOS LOS CAMPOS
+                    MyProducto.NombreProducto = txtNuevoProducto.Text;
+                    MyProducto.PrecioUnidad = decimal.Parse(txtPrecioUni.Text);
+                    MyProducto.UnidadStock = int.Parse(txtUnidadesStock.Text);
+
+                    //AÑADIMOS EL REGISTRO A LA BASE DE DATOS
+                    dbExamen.PRODUCTOS.InsertOnSubmit(MyProducto);
+                    //CONFIRMAMOS
+                    dbExamen.SubmitChanges();
+                    //CARGAMOS GRID PARA VER LOS RESULTADOS
+                    CargarGrid();
+
+                    //LIMPIAMOS LOS CAMPOS
+                    txtNuevoProducto.Text = "";
+                    txtPrecioUni.Text = "";
+                    txtUnidadesStock.Text = "";
+                    CargarCombo();
+
+                }
+            }
+            catch 
+            {
+                
+                MessageBox.Show("Clave Duplicada");
             }
         }
         //BOTÓN PARA ELIMINAR PRODUCTOS
@@ -90,6 +95,8 @@ namespace ExamenParcial25_08Saúl
                 dbExamen.PRODUCTOS.DeleteOnSubmit(MyProductos);
                 dbExamen.SubmitChanges();
                 CargarGrid();
+                CargarCombo();
+
             }
             catch 
             {
@@ -147,6 +154,17 @@ namespace ExamenParcial25_08Saúl
             {
                 MessageBox.Show("No se encuentra ningún producto coincidente");
             }
+
+        }
+
+        private void cbProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PRODUCTOS MyProducto = dbExamen.PRODUCTOS.Single(u =>
+            u.NombreProducto.Contains(cbProductos.Text));
+            //CARGAMOS LOS TEXBOX
+            txtNuevoProducto.Text = MyProducto.NombreProducto;
+            txtPrecioUni.Text = MyProducto.PrecioUnidad.ToString();
+            txtUnidadesStock.Text = MyProducto.UnidadStock.ToString();
 
         }
     }
