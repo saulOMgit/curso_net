@@ -29,6 +29,7 @@ namespace ExamenParcial25_08Saúl
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.txtNuevoProducto = new System.Windows.Forms.TextBox();
             this.txtPrecioUni = new System.Windows.Forms.TextBox();
@@ -173,6 +174,8 @@ namespace ExamenParcial25_08Saúl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(465, 489);
             this.Controls.Add(this.GridDatos);
             this.Controls.Add(this.btnBuscar);
