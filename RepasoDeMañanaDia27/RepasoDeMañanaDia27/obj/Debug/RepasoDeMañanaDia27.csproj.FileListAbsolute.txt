@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\bin\Debug\RepasoDeMañanaDia27.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\bin\Debug\RepasoDeMañanaDia27.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\bin\Debug\RepasoDeMañanaDia27.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\obj\Debug\RepasoDeMañanaDia27.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\obj\Debug\RepasoDeMañanaDia27.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\obj\Debug\RepasoDeMañanaDia27.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\RepasoDeMañanaDia27\RepasoDeMañanaDia27\obj\Debug\RepasoDeMañanaDia27.pdb
