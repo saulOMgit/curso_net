@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace RepasoDeMañanaDia27
 {
@@ -10,9 +11,9 @@ namespace RepasoDeMañanaDia27
     {
         static void Main(string[] args)
         {
-            Coche lere = new Coche(001, "BMW", "X4", 10000, 500000, true);
-            lere.ListarCoche();
-            Console.ReadKey();
+            //Coche lere = new Coche(001, "BMW", "X4", 10000, 500000, true);
+            //lere.ListarCoche();
+            //Console.ReadKey();
             Coche Coche1 = new Coche();
             Moto Moto1 = new Moto();
             string opcion;
@@ -66,6 +67,7 @@ namespace RepasoDeMañanaDia27
                         break;
                     case "5":
                         Console.WriteLine("Gracias por utilizar nuestros servicios\nVuelva pronto");
+                        Thread.Sleep(2000);
                         break;
                     default:
 
