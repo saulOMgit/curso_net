@@ -26,7 +26,7 @@ namespace RepasoDeMañanaDia27
         public void ListarMoto()
         {
             string sidecar = "No";
-            if (_sidecar == true) { sidecar = "Si"; }
+            if (_sidecar == true) { sidecar = "Si"; _Precio = _Precio + 50; }
             Console.WriteLine("El id del Coche es: " + _ID + "\nMarca: " + _Marca + "\nModelo: " + _Modelo + "\nKM recorridos: " + _KM + "\nPrecio: " + _Precio + " Euros\nSidecar:" + sidecar);
         }
     }
