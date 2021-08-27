@@ -20,11 +20,12 @@ namespace PRUEBA_PRÁCTICA_UNIDAD_UF1846
             this.listarclientes();
             this.listarcombo();
         }
-
+        //Alimentamos el GRID
         void listarclientes() 
         {
             GridDatos.DataSource = ClienteLinq.ListarTodos();
         }
+        //Alimentamos el Combo
         void listarcombo() 
         {
             cbProductos.DataSource = ClienteLinq.listarCombo();
@@ -34,26 +35,66 @@ namespace PRUEBA_PRÁCTICA_UNIDAD_UF1846
         //Botón para añadir productos
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            ClienteLinq.sp_AñadirProducto(txtNuevoProducto.Text, decimal.Parse(txtPrecioUni.Text), int.Parse(txtUnidadesStock.Text));
-            this.listarclientes();
-            this.listarcombo();
+            try
+            {
+                if (txtNuevoProducto.Text == "")
+                {
+                    MessageBox.Show("Introduzca Producto a Añadir");
+                }
+                else
+                {
+                    ClienteLinq.sp_AñadirProducto(txtNuevoProducto.Text, decimal.Parse(txtPrecioUni.Text), int.Parse(txtUnidadesStock.Text));
+                    this.listarclientes();
+                    this.listarcombo();
+                }
+            }
+            catch 
+            {
+                if (txtNuevoProducto.Text == "") 
+                {
+                    MessageBox.Show("Introduzca Producto a Añadir");
+                }
+                else { MessageBox.Show("Producto repetido"); }
+            }
 
         }
         //Botón para modificar productos
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ClienteLinq.sp_ModificaProducto(cbProductos.Text, decimal.Parse(txtPrecioUni.Text), int.Parse(txtUnidadesStock.Text));
-            this.listarclientes();
-            this.listarcombo();
+            try
+            {
+                if (cbProductos.Text == "") { MessageBox.Show("Introduce Producto a modificar"); }
+                else
+                {
+                    ClienteLinq.sp_ModificaProducto(cbProductos.Text, decimal.Parse(txtPrecioUni.Text), int.Parse(txtUnidadesStock.Text));
+                    this.listarclientes();
+                    this.listarcombo();
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Producto no valido");
+            }
 
 
         }
         //Botón para Eliminar productos
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ClienteLinq.sp_EliminarProducto(cbProductos.Text);
-            this.listarclientes();
-            this.listarcombo();
+            try
+            {
+                if (cbProductos.Text == "") { MessageBox.Show("Introduce Producto a eliminar"); }
+                else
+                {
+                    ClienteLinq.sp_EliminarProducto(cbProductos.Text);
+                    this.listarclientes();
+                    this.listarcombo();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Producto no valido");
+            }
 
         }
 
@@ -63,11 +104,23 @@ namespace PRUEBA_PRÁCTICA_UNIDAD_UF1846
             this.listarcombo();
         }
 
+        //Boton para Buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            GridDatos.DataSource=ClienteLinq.sp_BuscarCliente(txtBuscar.Text);
+            try
+            {
+                if (txtBuscar.Text == "") { MessageBox.Show("Introduce Producto a buscar"); }
+                else
+                {
+                    GridDatos.DataSource = ClienteLinq.sp_BuscarCliente(txtBuscar.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Producto no valido");
+            }
         }
-
+        //Funcion para alimentar los TextBox clickando en el Grid
         private void GridDatos_SelectionChanged(object sender, EventArgs e)
         {
             int siguiente = GridDatos.CurrentRow.Index;
