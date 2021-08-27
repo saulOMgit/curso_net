@@ -19,7 +19,29 @@ namespace Segunda_Parte
         }
 
         //constructor por parametros
-        public Persona() { }
+        public Persona(string Nombre,string Empresa) 
+        {
+            this.nombre = Nombre;
+            this.empresa = Empresa;
+        }
+
+        //getters y setters
+        public string Pnombre 
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        public string Pempresa 
+        {
+            get { return empresa; }
+            set { empresa = value; }
+        }
+
+        public void listar() 
+        {
+            Console.WriteLine("Nombre: "+nombre+"\nEmpresa:");
+        }
 
 
     }

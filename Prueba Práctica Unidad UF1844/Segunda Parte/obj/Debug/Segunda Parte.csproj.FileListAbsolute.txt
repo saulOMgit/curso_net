@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\bin\Debug\Segunda Parte.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\bin\Debug\Segunda Parte.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\bin\Debug\Segunda Parte.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\obj\Debug\Segunda Parte.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\obj\Debug\Segunda Parte.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\obj\Debug\Segunda Parte.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Segunda Parte\obj\Debug\Segunda Parte.pdb

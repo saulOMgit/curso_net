@@ -10,6 +10,9 @@ namespace Segunda_Parte
     {
         static void Main(string[] args)
         {
+            RepartidorGlovo Federico = new RepartidorGlovo("Federico Gando", "GLOVO", 10, 2, 5);
+            Federico.SueldoTrabajador();
+            Console.ReadKey();
         }
     }
 }
