@@ -41,6 +41,7 @@ namespace RepasoDeMañanaDia27
                         if (opcionairbag == "S" || opcionairbag == "s") 
                         { Coche1.PAirbag = true; }
                         else { Coche1.PAirbag = false; }
+                        Console.Clear();
                         break;
                     case "2":
                         Console.WriteLine("Introduce ID;");
@@ -53,16 +54,19 @@ namespace RepasoDeMañanaDia27
                         Moto1.PKM = int.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce Precio:");
                         Moto1.PPrecio = double.Parse(Console.ReadLine());
-                        Console.WriteLine("¿Tiene Airbag? S/N");
+                        Console.WriteLine("¿Quieres Sidecar? S/N");
                         string opcionsidecar = Console.ReadLine();
                         if (opcionsidecar == "S" || opcionsidecar == "s")
                         { Moto1.PSidecar = true; }
                         else { Moto1.PSidecar = false; }
+                        Console.Clear();
                         break;
                     case "3":
+                        Coche1.PrecioAirbag();
                         Coche1.ListarCoche();
                         break;
                     case "4":
+                        Moto1.PrecioSidecar();
                         Moto1.ListarMoto();
                         break;
                     case "5":

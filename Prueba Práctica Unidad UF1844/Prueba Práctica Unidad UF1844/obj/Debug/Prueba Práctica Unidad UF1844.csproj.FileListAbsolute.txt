@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\obj\Debug\Prueba Práctica Unidad UF1844.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\obj\Debug\Prueba Práctica Unidad UF1844.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\bin\Debug\Prueba Práctica Unidad UF1844.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\bin\Debug\Prueba Práctica Unidad UF1844.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\bin\Debug\Prueba Práctica Unidad UF1844.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\obj\Debug\Prueba Práctica Unidad UF1844.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844\obj\Debug\Prueba Práctica Unidad UF1844.pdb

@@ -28,8 +28,14 @@ namespace RepasoDeMañanaDia27
         public void ListarCoche() 
         {
             string airbag="No";
-            if (_Airbag == true) { airbag = "Si"; _Precio = _Precio + 200; }
+            if (_Airbag == true) { airbag = "Si";}
             Console.WriteLine("El id del Coche es: "+_ID+"\nMarca: "+_Marca+"\nModelo: "+_Modelo+"\nKM recorridos: "+_KM+"\nPrecio: "+_Precio+" Euros\nAirbag:"+airbag);
+        }
+
+        public void PrecioAirbag() 
+        {
+            if (_Airbag == true) { _Precio = _Precio + 200; }
+            else { }
         }
         
         
