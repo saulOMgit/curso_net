@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EXAMEN" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA408\SQLEXPRESSSAUL;Initial Catalog=EXAMEN;Persist Security Info=True;User ID=sa" SettingsObjectName="PRUEBA_PRÁCTICA_UNIDAD_UF1846.Properties.Settings" SettingsPropertyName="EXAMENConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_AñadirProducto" Method="sp_AñadirProducto">
+    <Parameter Name="NOMPROD" Parameter="nOMPROD" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PRECIO" Parameter="pRECIO" Type="System.Decimal" DbType="Decimal(20,2)" />
+    <Parameter Name="STOCK" Parameter="sTOCK" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_ModificaProducto" Method="sp_ModificaProducto">
+    <Parameter Name="NOMPROD" Parameter="nOMPROD" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PRECIO" Parameter="pRECIO" Type="System.Decimal" DbType="Decimal(20,2)" />
+    <Parameter Name="STOCK" Parameter="sTOCK" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_EliminarProducto" Method="sp_EliminarProducto">
+    <Parameter Name="NOMPROD" Parameter="nOMPROD" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_BuscarCliente" Method="sp_BuscarCliente">
+    <Parameter Name="NOMPROD" Parameter="nOMPROD" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_BuscarClienteResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnidad" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="UnidadStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listarCombo" Method="listarCombo">
+    <ElementType Name="listarComboResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarTodos" Method="ListarTodos">
+    <ElementType Name="ListarTodosResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnidad" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="UnidadStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

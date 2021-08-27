@@ -1,0 +1,10 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\bin\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.exe.config
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\bin\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\bin\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA_PRÁCTICA_UNIDAD_UF1846.Form1.resources
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA_PRÁCTICA_UNIDAD_UF1846.Properties.Resources.resources
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.exe
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\PRUEBA PRÁCTICA UNIDAD UF1846\PRUEBA PRÁCTICA UNIDAD UF1846\obj\Debug\PRUEBA PRÁCTICA UNIDAD UF1846.pdb
