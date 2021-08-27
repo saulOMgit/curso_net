@@ -30,7 +30,7 @@ namespace Prueba_Práctica_Unidad_UF1844
         //listar los datos  de la clase Camión
         public void ListarCamion()
         {
-            Console.WriteLine("Tipo: Camión, Precio: " + PPrecioVenta + ",Precio: " + PPrecioVenta + ", Nombre: " + PPrecioVenta + ",Toneladas: " + PToneladas); ; ;
+            Console.WriteLine("Tipo: Camión, Precio: " + precioVenta +", Nombre: " + nombreVehiculo + ",Toneladas: " + toneladas); ; ;
         }
     }
 }

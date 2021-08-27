@@ -25,10 +25,10 @@ namespace Prueba_Práctica_Unidad_UF1844
                         Console.WriteLine("Introduce precio venta;");
                         Turismo1.PPrecioVenta = double.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce precio fabrica:");
-                        Turismo1.PCostroFabrica = double.Parse(Console.ReadLine());
+                        Turismo1.PCostoFabrica = double.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce Modelo:");
                         Turismo1.PNombreVehiculo = Console.ReadLine();
-                        Console.WriteLine("¿Tiene Airbag? S/N");
+                        Console.WriteLine("¿Es Clasico? S/N");
                         string opcionclasico = Console.ReadLine();
                         if (opcionclasico == "S" || opcionclasico== "s")
                         { Turismo1.PClasico = true; }
@@ -39,7 +39,7 @@ namespace Prueba_Práctica_Unidad_UF1844
                         Console.WriteLine("Introduce precio venta;");
                         Camion1.PPrecioVenta = double.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce precio fabrica:");
-                        Camion1.PCostroFabrica = double.Parse(Console.ReadLine());
+                        Camion1.PCostoFabrica = double.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce Modelo:");
                         Camion1.PNombreVehiculo = Console.ReadLine();
                         Console.WriteLine("Introduce tonelaje");

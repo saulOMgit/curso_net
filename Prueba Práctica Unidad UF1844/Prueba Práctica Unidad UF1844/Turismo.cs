@@ -28,7 +28,7 @@ namespace Prueba_Práctica_Unidad_UF1844
         //Método para imprimir propiedades
         public void ListarTurismo() 
         {
-            Console.WriteLine("Tipo: Turismo, Precio: " + PPrecioVenta + ",Precio: " + PPrecioVenta + ", Nombre: " + PPrecioVenta + ",Clasico: " + clasico); ;
+            Console.WriteLine("Tipo: Turismo, Precio: " + precioVenta +", Nombre: " + nombreVehiculo + ",Clasico: " + clasico); ;
         }
 
     }

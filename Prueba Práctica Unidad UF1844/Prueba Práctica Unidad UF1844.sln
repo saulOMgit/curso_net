@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba Práctica Unidad UF1844", "Prueba Práctica Unidad UF1844\Prueba Práctica Unidad UF1844.csproj", "{7DB6EBA0-797D-4B2A-88EF-8B432518ED05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segunda Parte", "Segunda Parte\Segunda Parte.csproj", "{35C56564-8DF7-4DDF-A109-5225A9168E7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7DB6EBA0-797D-4B2A-88EF-8B432518ED05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB6EBA0-797D-4B2A-88EF-8B432518ED05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB6EBA0-797D-4B2A-88EF-8B432518ED05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C56564-8DF7-4DDF-A109-5225A9168E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C56564-8DF7-4DDF-A109-5225A9168E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C56564-8DF7-4DDF-A109-5225A9168E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C56564-8DF7-4DDF-A109-5225A9168E7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

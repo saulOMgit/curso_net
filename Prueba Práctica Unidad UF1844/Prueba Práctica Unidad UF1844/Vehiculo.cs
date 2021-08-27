@@ -32,7 +32,7 @@ namespace Prueba_Práctica_Unidad_UF1844
             set { precioVenta = value; }
         }
 
-        public double PCostroFabrica 
+        public double PCostoFabrica 
         {
             get { return costoFabrica; }
             set { costoFabrica = value; }
