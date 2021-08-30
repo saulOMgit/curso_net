@@ -25,6 +25,6 @@ namespace CuestionarioASP
             Label4.Text = correctas+" preguntas correctas";
 
             
-        }
+        }        
     }
 }
