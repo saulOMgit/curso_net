@@ -13,5 +13,24 @@ namespace EjercicioDeValidacionASP
         {
 
         }
+
+       
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox1.Checked == false) 
+            { btnEnviar.Enabled = false; }
+            else
+            { btnEnviar.Enabled = true; }
+        }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if (IsValid && CheckBox1.Checked == true) Response.Redirect("Acesso.aspx");
+            else if (CheckBox1.Checked == false) 
+            {
+                LabelEnvio.Text = "Debe Aceptar los terminos";
+            }
+        }
     }
 }

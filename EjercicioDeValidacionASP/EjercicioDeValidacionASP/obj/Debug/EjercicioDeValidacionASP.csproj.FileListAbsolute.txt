@@ -52,8 +52,8 @@ C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacion
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.csproj.AssemblyReference.cache
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.csproj.CoreCompileInputs.cache
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.csproj.CopyComplete
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.dll
 C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.pdb
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\EjercicioDeValidacionASP\EjercicioDeValidacionASP\obj\Debug\EjercicioDeValidacionASP.csproj.AssemblyReference.cache

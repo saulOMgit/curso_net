@@ -1,3 +1,14 @@
 ﻿body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:aquamarine;
 }
 div{margin:1em;}
+
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin-right: 30px;
+    text-align: right;
+}
+

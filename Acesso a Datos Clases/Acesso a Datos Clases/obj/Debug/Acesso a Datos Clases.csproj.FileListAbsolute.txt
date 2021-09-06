@@ -1,0 +1,2 @@
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Acesso a Datos Clases\Acesso a Datos Clases\obj\Debug\Acesso a Datos Clases.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\Asata Saúl Otero Melchor\curso_net\Acesso a Datos Clases\Acesso a Datos Clases\obj\Debug\Acesso a Datos Clases.csproj.CoreCompileInputs.cache

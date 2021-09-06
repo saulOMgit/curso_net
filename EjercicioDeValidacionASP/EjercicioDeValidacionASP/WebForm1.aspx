@@ -13,6 +13,7 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Nombre de usuario:"></asp:Label>
             <asp:TextBox ID="TextBox1" runat="server" Width="283px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo requerido" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
         </div>
         <div>
             <asp:Label ID="Label2" runat="server" Text="Clave:"></asp:Label>
@@ -26,6 +27,8 @@
                 <div>
             <asp:Label ID="Label4" runat="server" Text="Correo Electrónico:"></asp:Label>
             <asp:TextBox ID="TextBox4" runat="server" Width="283px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo requerido" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="TextBox4" Text="Mail incorrecto" ValidationExpression='^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$'></asp:RegularExpressionValidator>
         </div>
                 <div>
             <asp:Label ID="Label5" runat="server" Text="Apellido:"></asp:Label>
@@ -50,6 +53,9 @@
                 <div>
             <asp:Label ID="Label9" runat="server" Text="Código Postal"></asp:Label>
             <asp:TextBox ID="TextBox8" runat="server" Width="283px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo requerido" ControlToValidate="TextBox8"></asp:RequiredFieldValidator>
+                   <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Código Postal no Válido" ControlToValidate="TextBox8" MaximumValue="60000" MinimumValue="1000"></asp:RangeValidator>
+
         </div>
         <div>
             <asp:Label ID="Label10" runat="server" Text="Sexo:"></asp:Label>
@@ -59,7 +65,7 @@
         </div>
                 <div>
             <asp:Label ID="Label11" runat="server" Text="Feha de nacimiento (dd(mm/aaaa):"></asp:Label>
-            <asp:TextBox ID="TextBox9" runat="server" Width="283px"></asp:TextBox>
+                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
         </div>
                 <div>
             <asp:Label ID="Label12" runat="server" Text="Comentarios"></asp:Label>
@@ -67,10 +73,12 @@
         </div>
         <div>
             <asp:Label ID="Label13" runat="server" Text="Acepto los términos y condiciones:"></asp:Label>
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Acepto" />
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Acepto" OnCheckedChanged="CheckBox1_CheckedChanged" />
+<%--            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Requerido" ControlToValidate="Checkbox1"></asp:RequiredFieldValidator>--%>
         </div>
         <div>
-            <asp:Button />
+            <asp:Button ID="btnEnviar" runat="server" Text="Enviar" Enabled="True" OnClick="btnEnviar_Click"/>
+            <asp:Label ID="LabelEnvio" runat="server" Text="" ></asp:Label>
         </div>
     </form>
 </body>
