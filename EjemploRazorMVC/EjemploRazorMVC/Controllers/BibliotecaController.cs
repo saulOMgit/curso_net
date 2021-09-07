@@ -9,7 +9,7 @@ namespace EjemploRazorMVC.Controllers
 {
     public class BibliotecaController : Controller
     {
-        Biblioteca miBiblioteca = new Biblioteca();
+        static Biblioteca miBiblioteca = new Biblioteca();
         // GET: Biblioteca
         public ActionResult Index()
         {
@@ -35,6 +35,12 @@ namespace EjemploRazorMVC.Controllers
             try
             {
                 // TODO: Add insert logic here
+                miBiblioteca.Libros.Add(new Libro
+                {
+                    Isbn=(miBiblioteca.Libros.Count()+1).ToString(),
+                    Titulo = collection["Titulo"],
+                    TipoLibro = collection["Categoria"]
+                    });
 
                 return RedirectToAction("Index");
             }
@@ -67,18 +73,22 @@ namespace EjemploRazorMVC.Controllers
         }
 
         // GET: Biblioteca/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
-            return View();
+            return View(miBiblioteca.ObtenerPorIsbn(id.ToString()));
         }
 
         // POST: Biblioteca/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(string id, FormCollection collection)
         {
             try
             {
                 // TODO: Add delete logic here
+                foreach(Libro l in miBiblioteca.Libros)
+                {
+                    if (l.Isbn == id) miBiblioteca.Libros.Remove(l);
+                }
 
                 return RedirectToAction("Index");
             }

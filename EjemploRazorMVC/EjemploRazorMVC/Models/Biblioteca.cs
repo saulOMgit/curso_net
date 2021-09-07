@@ -17,5 +17,22 @@ namespace EjemploRazorMVC.Models
                 new  Libro  {  Isbn  =  "33311",  Titulo  =  "Steve  Jobs", TipoLibro =  "Biografía"}
             };
         }
+
+        public int NumeroLibros()
+        {
+            return Libros.Count();
+        }
+
+        public Libro ObtenerPorIsbn(string isbn)
+        {
+            foreach(var libroBuscar in Libros)
+            {
+                if (libroBuscar.Isbn == isbn)
+                {
+                    return libroBuscar;
+                }
+            }
+            return null;
+        }
     }
 }
